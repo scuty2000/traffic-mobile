@@ -315,7 +315,7 @@ public class VehicleComponent extends Component{
 	public void slowDown() {
 		//this.speed = 0;
 		this.accelerating = false;
-		if(this.speed >= 0.1 && accSlow.elapsed(Duration.seconds(0.08))) {
+		if(this.speed >= 0.1 && accSlow.elapsed(Duration.seconds(0.06))) {
 			this.speed -= acceleration;
 			accSlow.capture();
 		}

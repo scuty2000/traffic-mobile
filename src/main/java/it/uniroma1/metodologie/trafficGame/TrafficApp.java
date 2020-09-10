@@ -367,10 +367,10 @@ public class TrafficApp extends GameApplication {
 			//deve tornare un array con x, y, width e height
 			private int[] whereToCheck(Directions d){
 				switch(d) {
-				case UP: return new int[] {-125,-500,1,350};
-				case DOWN: return new int[] {125,200,1,350};
-				case LEFT: return new int[] {-500,125,350,1};
-				case RIGHT: return new int[] {200,-125,350,1};
+				case UP: return new int[] {-63,-500,1,350};
+				case DOWN: return new int[] {63,200,1,350};
+				case LEFT: return new int[] {-500,63,350,1};
+				case RIGHT: return new int[] {200,-63,350,1};
 				}
 				return null;
 				
