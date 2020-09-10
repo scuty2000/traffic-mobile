@@ -77,16 +77,12 @@ public class TrafficFactory implements EntityFactory{
 		e.getBoundingBoxComponent().addHitBox(h);
 		
 		//adding arrows
-		Rectangle f1 = new Rectangle(v.getWidth()-10, 0, 10, 10);
+		Rectangle f1 = new Rectangle(v.getWidth()-5, 0, 5, 5);
 		f1.setFill(Color.YELLOW);
 		f1.setVisible(false);
-		Rectangle f2 = new Rectangle(v.getWidth()-10, v.getHeigh() - 10, 10, 10);
+		Rectangle f2 = new Rectangle(v.getWidth()-5, v.getHeigh() - 5, 5, 5);
 		f2.setFill(Color.YELLOW);
 		f2.setVisible(false);
-		f1.setScaleX(scale);
-		f1.setScaleY(scale);
-		f2.setScaleX(scale);
-		f2.setScaleY(scale);
 		e.getViewComponent().addChild(f1);
 		e.getViewComponent().addChild(f2);
 		e.getComponent(VehicleComponent.class).addArrows(f1, f2);
