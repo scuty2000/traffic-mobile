@@ -88,7 +88,7 @@ public class VehicleComponent extends Component{
 	    for(int j = 0; j < 8; j++) {
 	    	arrayCurveBCK.add(new ArrayList<Point2D>());
 	    }
-		
+	    	
 		for (int i = 0; i < 356; ++i) {
 			
 		    final double angle = Math.toRadians(((double) i / 356) * 360d);
@@ -106,24 +106,32 @@ public class VehicleComponent extends Component{
 		}
 		
 		arrayCurveBCK.get(0).add(new Point2D(0, 0));
+		arrayCurveBCK.get(0).add(new Point2D(0, 0));
+		arrayCurveBCK.get(1).add(new Point2D(0, 0));
 		arrayCurveBCK.get(1).add(new Point2D(0, 0));
 		arrayCurveBCK.get(2).add(new Point2D(0, 0));
+		arrayCurveBCK.get(2).add(new Point2D(0, 0));
+		arrayCurveBCK.get(3).add(new Point2D(0, 0));
 		arrayCurveBCK.get(3).add(new Point2D(0, 0));
 		arrayCurveBCK.get(5).add(new Point2D(0, 0));
+		arrayCurveBCK.get(5).add(new Point2D(0, 0));
+		arrayCurveBCK.get(7).add(new Point2D(0, 0));
+		arrayCurveBCK.get(7).add(new Point2D(0, 0));
 		arrayCurveBCK.get(7).add(new Point2D(0, 0));
 		
 	}
 	
 	private static void calculatePoint(double angle, int number1, int number2, int i) {
+		if(i%2==0)
 		arrayCurveBCK.get(number1).add(new Point2D(
-		        Math.cos(angle) * COST - 5, 
-		        Math.sin(angle) * COST -5
+		        Math.cos(angle) * COST, 
+		        Math.sin(angle) * COST
 		    ));
-	    	if(i%2==0)
-	    		arrayCurveBCK.get(number2).add(new Point2D(
-			        Math.cos(angle) * COST - 5,
-			        Math.sin(angle) * COST - 5
-			    ));
+    	if(i%5==0)
+    		arrayCurveBCK.get(number2).add(new Point2D(
+		        Math.cos(angle) * COST,
+		        Math.sin(angle) * COST
+		    ));
 	}
 
 	@Override
@@ -162,8 +170,7 @@ public class VehicleComponent extends Component{
 		}
 	}
 	
-	private double mul;
-	private int rot;
+
 	
 	public Entity getNearestSemaforo() {
 		return getNearestByClass(EntityType.SEMAFORO);
@@ -176,43 +183,37 @@ public class VehicleComponent extends Component{
 	private Entity getNearestByClass(EntityType t) {
 		return FXGL.getGameWorld().getEntitiesByType(t).stream().sorted((x, y) -> (int)(x.distance(entity)-y.distance(entity))).collect(Collectors.toList()).get(0);
 	}
-
+	
+	private double rot;
+	
 	private void turn(Directions d) {
 		if(!d.equals(this.d)) {
 			switch(this.d) {
 			case UP : 
 				if(d.equals(Directions.LEFT)) {
-					mul = 0.5;
 					rot = -2;
 				} else {
-					mul = 1;
-					rot = +2;
+					rot = +5.0;
 				}
 				break;
 			case DOWN : 
 				if(d.equals(Directions.LEFT)) {
-					mul = 1;
-					rot = +2;
+					rot = +5.0;
 				} else {
-					mul = 0.5;
 					rot = -2;
 				}
 				break;
 			case RIGHT : 
 				if(d.equals(Directions.UP)) {
-					mul = 0.5;
 					rot = -2;
 				} else {
-					mul = 1;
-					rot = +2;
+					rot = +5.0;
 				}
 				break;
 			case LEFT : 
 				if(d.equals(Directions.UP)) {
-					mul = 1;
-					rot = +2;
+					rot = +5.0;
 				} else {
-					mul = 0.5;
 					rot = -2;
 				}
 				break;
@@ -225,29 +226,39 @@ public class VehicleComponent extends Component{
 	
 	private double TURN_GAP;
 	private LocalTimer turnTimer;
+	private int arrayUsed;
 	
 	@SuppressWarnings("unchecked")
 	private void turnAnimation() {
 		if(turnTimer.elapsed(Duration.seconds(TURN_GAP))){
-			entity.rotateBy(rot*mul);
-
-			if(this.oldDirection.equals(Directions.RIGHT) && this.d.equals(Directions.DOWN)){
-				entity.translate(arrayCurve.get(4).remove(0));
-			} else if(this.oldDirection.equals(Directions.RIGHT) && this.d.equals(Directions.UP)) {
-				entity.translate(arrayCurve.get(3).remove(arrayCurve.get(3).size()-1));
-			} else if(this.oldDirection.equals(Directions.UP) && this.d.equals(Directions.RIGHT)) {
-				entity.translate(arrayCurve.get(7).remove(0));
-			} else if(this.oldDirection.equals(Directions.UP) && this.d.equals(Directions.LEFT)) {
-				entity.translate(arrayCurve.get(2).remove(arrayCurve.get(2).size()-1));
-			} else if(this.oldDirection.equals(Directions.LEFT) && this.d.equals(Directions.UP)) {
-				entity.translate(arrayCurve.get(6).remove(0));
-			} else if(this.oldDirection.equals(Directions.LEFT) && this.d.equals(Directions.DOWN)) {
-				entity.translate(arrayCurve.get(1).remove(arrayCurve.get(1).size()-1));
-			} else if(this.oldDirection.equals(Directions.DOWN) && this.d.equals(Directions.RIGHT)) {
-				entity.translate(arrayCurve.get(0).remove(arrayCurve.get(0).size()-1));
-			} else if(this.oldDirection.equals(Directions.DOWN) && this.d.equals(Directions.LEFT)) { // TODO tune this
-				entity.translate(arrayCurve.get(5).remove(0));
-			}
+			entity.rotateBy(rot);
+			
+			if(turning)
+				if(this.oldDirection.equals(Directions.RIGHT) && this.d.equals(Directions.DOWN)){
+					entity.translate(arrayCurve.get(4).remove(0));
+					arrayUsed = 4;
+				} else if(this.oldDirection.equals(Directions.RIGHT) && this.d.equals(Directions.UP)) {
+					entity.translate(arrayCurve.get(3).remove(arrayCurve.get(3).size()-1));
+					arrayUsed = 3;
+				} else if(this.oldDirection.equals(Directions.UP) && this.d.equals(Directions.RIGHT)) {
+					entity.translate(arrayCurve.get(7).remove(0));
+					arrayUsed = 7;
+				} else if(this.oldDirection.equals(Directions.UP) && this.d.equals(Directions.LEFT)) {
+					entity.translate(arrayCurve.get(2).remove(arrayCurve.get(2).size()-1));
+					arrayUsed = 2;
+				} else if(this.oldDirection.equals(Directions.LEFT) && this.d.equals(Directions.UP)) {
+					entity.translate(arrayCurve.get(6).remove(0));
+					arrayUsed = 6;
+				} else if(this.oldDirection.equals(Directions.LEFT) && this.d.equals(Directions.DOWN)) {
+					entity.translate(arrayCurve.get(1).remove(arrayCurve.get(1).size()-1));
+					arrayUsed = 1;
+				} else if(this.oldDirection.equals(Directions.DOWN) && this.d.equals(Directions.RIGHT)) {
+					entity.translate(arrayCurve.get(0).remove(arrayCurve.get(0).size()-1));
+					arrayUsed = 0;
+				} else if(this.oldDirection.equals(Directions.DOWN) && this.d.equals(Directions.LEFT)) { // TODO tune this
+					entity.translate(arrayCurve.get(5).remove(0));
+					arrayUsed = 5;
+				}
 			
 			if(debugCurve)
 				FXGL.entityBuilder()
@@ -255,6 +266,7 @@ public class VehicleComponent extends Component{
 				.view(new Rectangle(5,5, Color.BLUE))
 				.buildAndAttach();
 
+			System.out.println(entity.getRotation());
 			if(entity.getRotation()%90 == 0) {
 				turning = false;
 				accelerate();
@@ -262,7 +274,6 @@ public class VehicleComponent extends Component{
 				for (ArrayList<Point2D> arrayList : arrayCurveBCK) {
 					this.arrayCurve.add((ArrayList<Point2D>) arrayList.clone());
 				}
-
 				this.currentArrow.setVisible(false);
 			}
 			turnTimer.capture();
