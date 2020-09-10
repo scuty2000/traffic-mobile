@@ -116,13 +116,13 @@ public class VehicleComponent extends Component{
 	
 	private static void calculatePoint(double angle, int number1, int number2, int i) {
 		arrayCurveBCK.get(number1).add(new Point2D(
-		        Math.cos(angle) * COST, 
-		        Math.sin(angle) * COST
+		        Math.cos(angle) * COST - 5, 
+		        Math.sin(angle) * COST -5
 		    ));
 	    	if(i%2==0)
 	    		arrayCurveBCK.get(number2).add(new Point2D(
-			        Math.cos(angle) * COST,
-			        Math.sin(angle) * COST
+			        Math.cos(angle) * COST - 5,
+			        Math.sin(angle) * COST - 5
 			    ));
 	}
 
