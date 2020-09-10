@@ -127,12 +127,24 @@ public class VehicleComponent extends Component{
 		        Math.cos(angle) * COST, 
 		        Math.sin(angle) * COST
 		    ));
-    	if(i%5==0)
+    	if(i%5==0) {
+    		double info = getInfos(number2);
     		arrayCurveBCK.get(number2).add(new Point2D(
-		        Math.cos(angle) * COST + 0.8,
-		        Math.sin(angle) * COST - 0.8
+		        Math.cos(angle) * COST + info,
+		        Math.sin(angle) * COST + info
 		    ));
+    	}
 	}
+	
+	private static double getInfos(int i) {
+		switch (i) {
+		case 4: return 0.7;
+		case 5: return 0.7;
+		case 6: return -0.7;
+		default: return -0.7;
+		}
+	}
+	
 
 	@Override
 	public void onUpdate(double tpf) {
