@@ -95,7 +95,7 @@ public class TrafficFactory implements EntityFactory{
 	}
 	
 	
-	private int vehicleHitboxLen = 40;
+	private int vehicleHitboxLen = 20;
 	
 	/**
 	 * spawns a random vehicle at the point indicated by data
