@@ -1,6 +1,5 @@
 package it.uniroma1.metodologie.trafficGame.components;
 
-import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,8 +28,8 @@ public class TrafficLightAnimationComponent extends Component {
 	public TrafficLightAnimationComponent(int tileID) {
 		
 		// parameters: sprite sheet image, number of frames per row, single frame width, single frame height, duration of the animation channel, start frame and end frame (c'ho messo un ora a capirlo dio santo non è scritto da nessuna parte)
-		animRed = new AnimationChannel(FXGL.image("semaforoRosso-0"+tileID+".png"), 1, 250, 250, Duration.seconds(1), 0, 0);
-		animGreen = new AnimationChannel(FXGL.image("semaforoVerde-0"+tileID+".png"), 1, 250, 250, Duration.seconds(1), 0, 0);
+		animRed = new AnimationChannel(FXGL.image("semaforoRosso-0"+tileID+".png"), 1, 125, 125, Duration.seconds(1), 0, 0);
+		animGreen = new AnimationChannel(FXGL.image("semaforoVerde-0"+tileID+".png"), 1, 125, 125, Duration.seconds(1), 0, 0);
 		
 		texture = new AnimatedTexture(animRed);
 	}

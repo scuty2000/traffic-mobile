@@ -105,7 +105,7 @@ public class TrafficApp extends GameApplication {
 	private Entity player1;
 	//private Entity player2;
 
-	private String map = "Mappa_02.tmx";
+	private String map = "Mappa_Testing.tmx";
 
 	public void setMap(String map) {
 		this.map = map;

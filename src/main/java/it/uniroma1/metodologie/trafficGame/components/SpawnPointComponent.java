@@ -82,36 +82,38 @@ public class SpawnPointComponent extends Component{
 		}
 	}
 	
+	private double COST = 0.5;
 
 	private void spawnQueuedCount() {
+		
 		if(queueCounter != null)
 			queueCounter.removeFromWorld();
 		
 		String direzione = (String) entity.getPropertyOptional("direzione").orElse("UP");
-		int xTranslation = 0;
-		int yTranslation = 0;
+		double xTranslation = 0;
+		double yTranslation = 0;
 		
-		int linkedTileX = (int)(spawnPointPosition.getX()/250) * 250 + 250;
-		int linkedTileY = (int)(spawnPointPosition.getY()/250) * 250 + 250;
+		double linkedTileX = (int)(spawnPointPosition.getX()/125) * 125 + 125;
+		double linkedTileY = (int)(spawnPointPosition.getY()/125) * 125 + 125;
 		
 		Color color = null;
 		
 		switch(direzione) {
 			case "UP":
-				xTranslation = 5;
-				yTranslation = -302;
+				xTranslation = 5*COST;
+				yTranslation = -302*COST;
 				break;
 			case "DOWN":
-				xTranslation = -300;
-				yTranslation = -245;
+				xTranslation = -300*COST;
+				yTranslation = -245*COST;
 				break;
 			case "RIGHT":
-				xTranslation = -245;
-				yTranslation = 5;
+				xTranslation = -245*COST;
+				yTranslation = 5*COST;
 				break;
 			case "LEFT":
-				xTranslation = -300;
-				yTranslation = -302;
+				xTranslation = -300*COST;
+				yTranslation = -302*COST;
 				break;
 		}
 		
@@ -123,10 +125,10 @@ public class SpawnPointComponent extends Component{
 			color = DANGER_COLOR;
 		}
 		
-		VBox box = new VBox(FXGL.getUIFactoryService().newText(this.vehicles+"", 40.0));
+		VBox box = new VBox(FXGL.getUIFactoryService().newText(this.vehicles+"", 20.0));
 		box.setBackground(new Background(new BackgroundFill(color, new CornerRadii(15), null)));
-		box.setMinWidth(45);
-		box.setMaxHeight(45);
+		box.setMinWidth(45*COST);
+		box.setMaxHeight(45*COST);
 		box.setAlignment(Pos.CENTER);
 		
 		queueCounter = FXGL.entityBuilder()
