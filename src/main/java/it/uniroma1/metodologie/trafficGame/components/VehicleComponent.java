@@ -129,8 +129,8 @@ public class VehicleComponent extends Component{
 		    ));
     	if(i%5==0)
     		arrayCurveBCK.get(number2).add(new Point2D(
-		        Math.cos(angle) * COST,
-		        Math.sin(angle) * COST
+		        Math.cos(angle) * COST + 0.8,
+		        Math.sin(angle) * COST - 0.8
 		    ));
 	}
 
@@ -266,7 +266,6 @@ public class VehicleComponent extends Component{
 				.view(new Rectangle(5,5, Color.BLUE))
 				.buildAndAttach();
 
-			System.out.println(entity.getRotation());
 			if(entity.getRotation()%90 == 0) {
 				turning = false;
 				accelerate();

@@ -59,21 +59,21 @@ public class TrafficApp extends GameApplication {
 	private int minSpawnRate = MEDIUM;	//min spawn fps
 	
 	public String getMinSpawnRate() {
-		return switch(this.minSpawnRate) {
-		case EASY -> "EASY";
-		case MEDIUM -> "MEDIUM";
-		case HARD -> "HARD";
-		default -> null;
-		};
+		switch(this.minSpawnRate) {
+		case EASY : return "EASY";
+		case MEDIUM : return "MEDIUM";
+		case HARD : return "HARD";
+		default : return null;
+		}
 	}
 
 	public void setMinSpawnRate(String difficulty) {
-		this.minSpawnRate = switch(difficulty) {
-			case "EASY" -> EASY;
-			case "MEDIUM" -> MEDIUM;
-			case "HARD" -> HARD;
-			default -> throw new IllegalArgumentException("Unexpected value: " + difficulty);
-		};
+		switch(difficulty) {
+			case "EASY" : this.minSpawnRate = EASY;
+			case "MEDIUM" : this.minSpawnRate = MEDIUM;
+			case "HARD" : this.minSpawnRate = HARD;
+			default : throw new IllegalArgumentException("Unexpected value: " + difficulty);
+		}
 	}
 
 	private int counter;
@@ -461,7 +461,7 @@ public class TrafficApp extends GameApplication {
 
 	private void spawnCar() {
 		pointsPerSec ++;
-		Entity e = FXGL.getGameWorld().getEntities().stream().filter(x -> x.getType().equals(EntityType.SPAWN)).collect(Collectors.toList()).get(new Random().nextInt(spawnCount));
+		Entity e = FXGL.getGameWorld().getEntities().stream().filter(x -> x.getType().equals(EntityType.SPAWN)).collect(Collectors.toList()).get(new Random().nextInt(0));//spawnCount));
 		SpawnData vdata = new SpawnData(e.getPosition());
 		vdata.put("spawn", e);
 		vdata.put("direction", Directions.valueOf((String)e.getPropertyOptional("direzione").orElse("RIGHT")));
