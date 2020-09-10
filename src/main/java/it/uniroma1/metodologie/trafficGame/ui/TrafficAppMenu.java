@@ -52,7 +52,7 @@ public class TrafficAppMenu extends FXGLMenu {
 	private final int xMenuPosition = 200;
 	private final int yMenuPosition = 750;
 	
-	private File dir = new File("src/assets/levels");
+	private File dir = new File("src/main/resources/assets/levels");
 	private List<File> files = Arrays.asList(dir.listFiles((FilenameFilter) new FilenameFilter() {
 	    @Override
 	    public boolean accept(File dir, String name) {

@@ -1,0 +1,74 @@
+23:05:45.455 [main                     ] DEBUG Logger               - Configured Logger
+23:05:45.485 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Traffic
+Version: Alpha 1.0
+Width: 2500
+Height: 1500
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class it.uniroma1.metodologie.trafficGame.TrafficApp$1
+
+23:05:46.130 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+23:05:46.142 [JavaFX Application Thread] INFO  Engine               - FXGL-dev-SNAPSHOT (06.09.2020 16.28) on MAC (J:14.0.1 FX:14)
+23:05:46.143 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+23:05:46.143 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Mac OS X version 10.15.6
+23:05:46.143 [JavaFX Application Thread] DEBUG Engine               - Architecture: x86_64
+23:05:46.144 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+23:05:46.144 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+23:05:46.324 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+23:05:46.325 [JavaFX Application Thread] DEBUG MainWindow           - Target size > screen size
+23:05:46.383 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 2500.0 x 1500.0
+23:05:46.383 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    1663.0 x 1012.0
+23:05:46.383 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (0.6652, 0.6746666666666666)
+23:05:46.384 [JavaFX Application Thread] DEBUG MainWindow           - Set initial scene to StartupScene
+23:05:46.391 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+23:05:46.540 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (0.0, 1.0)
+23:05:46.541 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 1663.0 x 1012.0
+23:05:46.541 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (0.6652, 0.6652)
+23:05:46.541 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 1663.0 x 1012.0
+23:05:46.542 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 1663.0 x 1013.0
+23:05:46.551 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+23:05:46.595 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+23:05:46.596 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/css/fxgl_dark.css
+23:05:46.680 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+23:05:47.035 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+23:05:47.103 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=1500, physics.ppm=50,0
+23:05:47.105 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 2500x1500
+23:05:47.120 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/bg.jpg
+23:05:47.523 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+23:05:47.525 [JavaFX Application Thread] FATAL FXGLApplication      - Uncaught Exception:
+java.lang.NullPointerException
+	at java.base/java.util.Objects.requireNonNull(Objects.java:222)
+	at java.base/java.util.Arrays$ArrayList.<init>(Arrays.java:4136)
+	at java.base/java.util.Arrays.asList(Arrays.java:4121)
+	at trafficGame.main/it.uniroma1.metodologie.trafficGame.ui.TrafficAppMenu.<init>(TrafficAppMenu.java:56)
+	at trafficGame.main/it.uniroma1.metodologie.trafficGame.TrafficApp$1.newMainMenu(TrafficApp.java:98)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$GameApplicationService.initAppScenes(FXGLApplication.kt:425)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$GameApplicationService.onInit(FXGLApplication.kt:391)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.Engine.initServices(Engine.kt:81)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$start$task$1.run(FXGLApplication.kt:119)
+	at com.almasb.fxgl.core/com.almasb.fxgl.core.concurrent.IOTask.lambda$ofVoid$5(IOTask.java:138)
+	at com.almasb.fxgl.core/com.almasb.fxgl.core.concurrent.IOTask$2.onExecute(IOTask.java:151)
+	at com.almasb.fxgl.core/com.almasb.fxgl.core.concurrent.IOTask$1.call(IOTask.java:107)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.call(Task.java:1425)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+23:05:47.526 [JavaFX Application Thread] FATAL FXGLApplication      - Application will now exit
+23:05:47.570 [JavaFX Application Thread] DEBUG MainWindow           - Push state: ErrorSubScene
+23:05:47.570 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:05:47.583 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from StartupScene and adding to ErrorSubScene
+23:05:47.583 [JavaFX Application Thread] DEBUG MainWindow           - StartupScene -> ErrorSubScene
+23:05:57.077 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+23:05:57.077 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+23:05:57.078 [JavaFX Application Thread] DEBUG MainWindow           - Closing main window
+23:05:57.091 [JavaFX Application Thread] DEBUG Logger               - Closing Logger

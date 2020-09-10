@@ -1,0 +1,574 @@
+23:11:24.043 [main                     ] DEBUG Logger               - Configured Logger
+23:11:24.070 [main                     ] DEBUG GameApplication      - Logging settings
+Title: Traffic
+Version: Alpha 1.0
+Width: 2000
+Height: 1125
+Fullscreen: false
+Intro: false
+Profiling: false
+Single step:false
+App Mode: DEVELOPER
+Menu Key: ESCAPE
+Stage Style: DECORATED
+Scene Factory: class it.uniroma1.metodologie.trafficGame.TrafficApp$1
+
+23:11:24.433 [JavaFX Application Thread] DEBUG FXGLApplication      - Initializing FXGL
+23:11:24.442 [JavaFX Application Thread] INFO  Engine               - FXGL-dev-SNAPSHOT (06.09.2020 16.28) on MAC (J:14.0.1 FX:14)
+23:11:24.442 [JavaFX Application Thread] DEBUG Engine               - JRE Vendor Name: Oracle Corporation
+23:11:24.443 [JavaFX Application Thread] DEBUG Engine               - Running on OS: Mac OS X version 10.15.6
+23:11:24.443 [JavaFX Application Thread] DEBUG Engine               - Architecture: x86_64
+23:11:24.443 [JavaFX Application Thread] INFO  Engine               - Source code and latest versions at: https://github.com/AlmasB/FXGL
+23:11:24.444 [JavaFX Application Thread] INFO  Engine               -              Join the FXGL chat at: https://gitter.im/AlmasB/FXGL
+23:11:24.561 [JavaFX Application Thread] DEBUG MainWindow           - Creating a JavaFX scene
+23:11:24.562 [JavaFX Application Thread] DEBUG MainWindow           - Target size > screen size
+23:11:24.613 [JavaFX Application Thread] DEBUG MainWindow           - Target settings size: 2000.0 x 1125.0
+23:11:24.613 [JavaFX Application Thread] DEBUG MainWindow           - Scaled scene size:    1775.0 x 1012.0
+23:11:24.613 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (0.8875, 0.8995555555555556)
+23:11:24.615 [JavaFX Application Thread] DEBUG MainWindow           - Set initial scene to StartupScene
+23:11:24.622 [JavaFX Application Thread] DEBUG MainWindow           - Opening main window
+23:11:24.720 [JavaFX Application Thread] DEBUG MainWindow           - Window border size: (0.0, 1.0)
+23:11:24.721 [JavaFX Application Thread] DEBUG MainWindow           - Scaled size: 1775.0 x 1012.0
+23:11:24.721 [JavaFX Application Thread] DEBUG MainWindow           - Scaled ratio: (0.8875, 0.8875)
+23:11:24.721 [JavaFX Application Thread] DEBUG MainWindow           - Scene size: 1775.0 x 1012.0
+23:11:24.721 [JavaFX Application Thread] DEBUG MainWindow           - Stage size: 1775.0 x 1013.0
+23:11:24.728 [FXGL Background Thread 1 ] DEBUG Engine               - Initializing environment variables
+23:11:24.756 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Applying CSS: fxgl_dark.css
+23:11:24.756 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/css/fxgl_dark.css
+23:11:24.832 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Initializing application scenes
+23:11:25.145 [FXGL Background Thread 1 ] DEBUG GameWorld            - Game world initialized
+23:11:25.224 [FXGL Background Thread 1 ] DEBUG PhysicsWorld         - Physics world initialized: appHeight=1125, physics.ppm=50,0
+23:11:25.227 [FXGL Background Thread 1 ] DEBUG GameScene            - Game scene initialized: 2000x1125
+23:11:25.240 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/bg.jpg
+23:11:25.703 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/logo.png
+23:11:25.891 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/particles/trace_horizontal.png
+23:11:25.929 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createMenuBodyGameMenu()
+23:11:25.948 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createOptionsMenu()
+23:11:25.952 [FXGL Background Thread 1 ] DEBUG FXGL.DefaultMenu     - createExtraMenu()
+23:11:25.955 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/particles/smoke.png
+23:11:26.022 [FXGL Background Thread 1 ] DEBUG GameApplicationServi - Application scenes initialized
+23:11:26.039 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Loading FXGL system data
+23:11:26.043 [FXGL Background Thread 1 ] DEBUG FileSystemAccess     - Reading from: /Users/universita/Desktop/ProgettoJava/traffic-mobile/system/fxgl.bundle
+23:11:26.053 [FXGL Background Thread 1 ] DEBUG SystemBundleService  - Bundle FXGL: {}
+23:11:26.054 [FXGL Background Thread 1 ] DEBUG UpdaterService       - Checking for updates
+23:11:26.086 [FXGL Background Thread 4 ] DEBUG FXGLApplication      - Loading fonts
+23:11:26.087 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/fonts/VarelaRound-Regular.ttf
+23:11:26.087 [FXGL Background Thread 1 ] DEBUG FXGLApplication      - Loading default localization
+23:11:26.087 [FXGL Background Thread 1 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/languages/english.lang
+23:11:26.096 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/fonts/Abel-Regular.ttf
+23:11:26.099 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/fonts/lucida_console.ttf
+23:11:26.103 [FXGL Background Thread 4 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/fonts/Courier-Prime.ttf
+23:11:26.108 [JavaFX Application Thread] DEBUG FXGLApplication      - Registering font factories with UI factory
+23:11:26.123 [FXGL Background Thread 1 ] INFO  FXGLApplication      - FXGL initialization took: 1,395 sec
+23:11:26.134 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Change trafficlight status - F
+23:11:26.135 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Right - D
+23:11:26.135 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Left - A
+23:11:26.135 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Up - W
+23:11:26.136 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Move Down - S
+23:11:26.136 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Spawn Car - Space
+23:11:26.137 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Select and change traffic light - LMB
+23:11:26.137 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/fxgl_icon.png
+23:11:26.167 [JavaFX Application Thread] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/ui/cursors/fxgl_default.png
+23:11:26.169 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Screenshot - P
+23:11:26.169 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Options - 1
+23:11:26.170 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Dev Console - 2
+23:11:26.170 [JavaFX Application Thread] DEBUG Input                - Registered new binding: System info dump - CTRL+9
+23:11:26.171 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Restart - CTRL+R
+23:11:26.172 [JavaFX Application Thread] DEBUG Input                - Registered new binding: Toggle Debug Camera - CTRL+C
+23:11:26.174 [JavaFX Application Thread] DEBUG LoopRunner           - Starting loop
+23:11:26.193 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:26.204 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from StartupScene and adding to FXGLMainMenuDummyScene
+23:11:26.209 [JavaFX Application Thread] DEBUG MainWindow           - StartupScene -> FXGLMainMenuDummyScene
+23:11:26.209 [JavaFX Application Thread] DEBUG MainWindow           - Push state: TrafficAppMenu
+23:11:26.210 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:26.218 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to TrafficAppMenu
+23:11:26.219 [JavaFX Application Thread] DEBUG MainWindow           - FXGLMainMenuDummyScene -> TrafficAppMenu
+23:11:29.089 [FXGL Background Thread 3 ] DEBUG Engine               - Logging environment variables
+23:11:29.090 [FXGL Background Thread 3 ] DEBUG Engine               - achievements: []
+23:11:29.091 [FXGL Background Thread 3 ] DEBUG Engine               - appIcon: fxgl_icon.png
+23:11:29.092 [FXGL Background Thread 3 ] DEBUG Engine               - applicationMode: DEVELOPER
+23:11:29.092 [FXGL Background Thread 3 ] DEBUG Engine               - cSSList: [fxgl_dark.css]
+23:11:29.093 [FXGL Background Thread 3 ] DEBUG Engine               - configClass: Optional.empty
+23:11:29.093 [FXGL Background Thread 3 ] DEBUG Engine               - credits: []
+23:11:29.094 [FXGL Background Thread 3 ] DEBUG Engine               - devBBoxColorProperty: ObjectProperty [value: 0xff0000ff]
+23:11:29.094 [FXGL Background Thread 3 ] DEBUG Engine               - devEnableDebugCameraProperty: BooleanProperty [value: false]
+23:11:29.095 [FXGL Background Thread 3 ] DEBUG Engine               - devSensorColorProperty: ObjectProperty [value: 0xffff00ff]
+23:11:29.095 [FXGL Background Thread 3 ] DEBUG Engine               - devShowBBoxProperty: BooleanProperty [value: false]
+23:11:29.095 [FXGL Background Thread 3 ] DEBUG Engine               - devShowPositionProperty: BooleanProperty [value: false]
+23:11:29.096 [FXGL Background Thread 3 ] DEBUG Engine               - enabledMenuItems: [SAVE_LOAD, EXTRA, ONLINE]
+23:11:29.096 [FXGL Background Thread 3 ] DEBUG Engine               - engineServices: [class com.almasb.fxgl.app.FXGLApplication$GameApplicationService, class com.almasb.fxgl.app.services.FXGLDialogService, class com.almasb.fxgl.app.services.IOTaskExecutorService, class com.almasb.fxgl.event.EventBusService, class com.almasb.fxgl.io.FileSystemService, class com.almasb.fxgl.localization.LocalizationService, class com.almasb.fxgl.app.services.FXGLAssetLoaderService, class com.almasb.fxgl.app.services.SystemBundleService, class com.almasb.fxgl.profile.SaveLoadService, class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider, class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider, class com.almasb.fxgl.audio.AudioPlayer, class com.almasb.fxgl.notification.impl.NotificationServiceProvider, class com.almasb.fxgl.achievement.AchievementService, class com.almasb.fxgl.cutscene.CutsceneService, class com.almasb.fxgl.minigames.MiniGameService, class com.almasb.fxgl.net.NetService, class com.almasb.fxgl.app.services.UpdaterService, class com.almasb.fxgl.dev.DevService]
+23:11:29.096 [FXGL Background Thread 3 ] DEBUG Engine               - fontGame: Abel-Regular.ttf
+23:11:29.097 [FXGL Background Thread 3 ] DEBUG Engine               - fontMono: lucida_console.ttf
+23:11:29.097 [FXGL Background Thread 3 ] DEBUG Engine               - fontText: Courier-Prime.ttf
+23:11:29.097 [FXGL Background Thread 3 ] DEBUG Engine               - fontUI: VarelaRound-Regular.ttf
+23:11:29.098 [FXGL Background Thread 3 ] DEBUG Engine               - fullScreen: BooleanProperty [value: false]
+23:11:29.098 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficulty: MEDIUM
+23:11:29.098 [FXGL Background Thread 3 ] DEBUG Engine               - gameDifficultyProperty: ObjectProperty [value: MEDIUM]
+23:11:29.099 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolume: 0.5
+23:11:29.099 [FXGL Background Thread 3 ] DEBUG Engine               - globalMusicVolumeProperty: DoubleProperty [value: 0.5]
+23:11:29.099 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolume: 0.5
+23:11:29.100 [FXGL Background Thread 3 ] DEBUG Engine               - globalSoundVolumeProperty: DoubleProperty [value: 0.5]
+23:11:29.100 [FXGL Background Thread 3 ] DEBUG Engine               - height: 1125
+23:11:29.101 [FXGL Background Thread 3 ] DEBUG Engine               - isAndroid: false
+23:11:29.101 [FXGL Background Thread 3 ] DEBUG Engine               - isBrowser: false
+23:11:29.101 [FXGL Background Thread 3 ] DEBUG Engine               - isClickFeedbackEnabled: false
+23:11:29.102 [FXGL Background Thread 3 ] DEBUG Engine               - isCloseConfirmation: false
+23:11:29.102 [FXGL Background Thread 3 ] DEBUG Engine               - isDesktop: true
+23:11:29.102 [FXGL Background Thread 3 ] DEBUG Engine               - isDeveloperMenuEnabled: true
+23:11:29.103 [FXGL Background Thread 3 ] DEBUG Engine               - isEntityPreloadEnabled: true
+23:11:29.103 [FXGL Background Thread 3 ] DEBUG Engine               - isExperimentalNative: false
+23:11:29.103 [FXGL Background Thread 3 ] DEBUG Engine               - isExperimentalTiledLargeMap: false
+23:11:29.103 [FXGL Background Thread 3 ] DEBUG Engine               - isFileSystemWriteAllowed: true
+23:11:29.104 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenAllowed: false
+23:11:29.104 [FXGL Background Thread 3 ] DEBUG Engine               - isFullScreenFromStart: false
+23:11:29.104 [FXGL Background Thread 3 ] DEBUG Engine               - isGameMenuEnabled: true
+23:11:29.104 [FXGL Background Thread 3 ] DEBUG Engine               - isIOS: false
+23:11:29.105 [FXGL Background Thread 3 ] DEBUG Engine               - isIntroEnabled: false
+23:11:29.105 [FXGL Background Thread 3 ] DEBUG Engine               - isLinux: false
+23:11:29.105 [FXGL Background Thread 3 ] DEBUG Engine               - isMac: true
+23:11:29.106 [FXGL Background Thread 3 ] DEBUG Engine               - isMainMenuEnabled: true
+23:11:29.107 [FXGL Background Thread 3 ] DEBUG Engine               - isManualResizeEnabled: true
+23:11:29.107 [FXGL Background Thread 3 ] DEBUG Engine               - isMobile: false
+23:11:29.107 [FXGL Background Thread 3 ] DEBUG Engine               - isPreserveResizeRatio: true
+23:11:29.107 [FXGL Background Thread 3 ] DEBUG Engine               - isProfilingEnabled: false
+23:11:29.108 [FXGL Background Thread 3 ] DEBUG Engine               - isSingleStep: false
+23:11:29.108 [FXGL Background Thread 3 ] DEBUG Engine               - isUserProfileEnabled: false
+23:11:29.108 [FXGL Background Thread 3 ] DEBUG Engine               - isWindows: false
+23:11:29.108 [FXGL Background Thread 3 ] DEBUG Engine               - language: ObjectProperty [value: ENGLISH]
+23:11:29.109 [FXGL Background Thread 3 ] DEBUG Engine               - menuKey: ESCAPE
+23:11:29.109 [FXGL Background Thread 3 ] DEBUG Engine               - notificationViewClass: class com.almasb.fxgl.notification.view.XboxNotificationView
+23:11:29.109 [FXGL Background Thread 3 ] DEBUG Engine               - pixelsPerMeter: 50.0
+23:11:29.109 [FXGL Background Thread 3 ] DEBUG Engine               - platform: MAC
+23:11:29.110 [FXGL Background Thread 3 ] DEBUG Engine               - profileDir: profiles/
+23:11:29.110 [FXGL Background Thread 3 ] DEBUG Engine               - profileName: StringProperty [value: DEFAULT]
+23:11:29.110 [FXGL Background Thread 3 ] DEBUG Engine               - randomSeed: -1
+23:11:29.110 [FXGL Background Thread 3 ] DEBUG Engine               - runtimeInfo: RuntimeInfo(platform=MAC, version=dev-SNAPSHOT, build=06.09.2020 16.28)
+23:11:29.110 [FXGL Background Thread 3 ] DEBUG Engine               - saveFileExt: sav
+23:11:29.111 [FXGL Background Thread 3 ] DEBUG Engine               - sceneFactory: it.uniroma1.metodologie.trafficGame.TrafficApp$1@5a1a6d85
+23:11:29.111 [FXGL Background Thread 3 ] DEBUG Engine               - secondsIn24h: 60
+23:11:29.111 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuBack: menu/back.wav
+23:11:29.111 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuPress: menu/press.wav
+23:11:29.111 [FXGL Background Thread 3 ] DEBUG Engine               - soundMenuSelect: menu/select.wav
+23:11:29.111 [FXGL Background Thread 3 ] DEBUG Engine               - soundNotification: core/notification.wav
+23:11:29.112 [FXGL Background Thread 3 ] DEBUG Engine               - stageStyle: DECORATED
+23:11:29.112 [FXGL Background Thread 3 ] DEBUG Engine               - supportedLanguages: [ENGLISH, FRENCH, GERMAN, HUNGARIAN, RUSSIAN]
+23:11:29.112 [FXGL Background Thread 3 ] DEBUG Engine               - title: Traffic
+23:11:29.112 [FXGL Background Thread 3 ] DEBUG Engine               - urlGithub: https://github.com/AlmasB/FXGL
+23:11:29.113 [FXGL Background Thread 3 ] DEBUG Engine               - urlLeaderboard: http://fxgl-top.herokuapp.com/
+23:11:29.113 [FXGL Background Thread 3 ] DEBUG Engine               - urlPOM: https://raw.githubusercontent.com/AlmasB/FXGL/master/pom.xml
+23:11:29.113 [FXGL Background Thread 3 ] DEBUG Engine               - version: Alpha 1.0
+23:11:29.113 [FXGL Background Thread 3 ] DEBUG Engine               - versionCheckDays: 7
+23:11:29.113 [FXGL Background Thread 3 ] DEBUG Engine               - width: 2000
+23:11:29.114 [FXGL Background Thread 3 ] DEBUG Engine               - Logging services
+23:11:29.114 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.FXGLApplication$GameApplicationService
+23:11:29.114 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLDialogService
+23:11:29.114 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.IOTaskExecutorService
+23:11:29.114 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.event.EventBusService
+23:11:29.115 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.io.FileSystemService
+23:11:29.115 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.localization.LocalizationService
+23:11:29.115 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.FXGLAssetLoaderService
+23:11:29.115 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.SystemBundleService
+23:11:29.115 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.profile.SaveLoadService
+23:11:29.116 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLUIFactoryServiceProvider
+23:11:29.116 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.ui.FXGLDialogFactoryServiceProvider
+23:11:29.116 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.audio.AudioPlayer
+23:11:29.116 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.notification.impl.NotificationServiceProvider
+23:11:29.116 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.achievement.AchievementService
+23:11:29.116 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.cutscene.CutsceneService
+23:11:29.117 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.minigames.MiniGameService
+23:11:29.117 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.net.NetService
+23:11:29.117 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.app.services.UpdaterService
+23:11:29.118 [FXGL Background Thread 3 ] DEBUG Engine               - class com.almasb.fxgl.dev.DevService
+23:11:30.590 [JavaFX Application Thread] DEBUG Menu                 - fireNewGame()
+23:11:30.590 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:11:30.591 [JavaFX Application Thread] DEBUG MainWindow           - Pop state: TrafficAppMenu
+23:11:30.591 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:30.593 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from TrafficAppMenu and adding to FXGLMainMenuDummyScene
+23:11:30.597 [JavaFX Application Thread] DEBUG MainWindow           - FXGLMainMenuDummyScene <- TrafficAppMenu
+23:11:30.597 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:30.607 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLLoadingScene
+23:11:30.608 [JavaFX Application Thread] DEBUG MainWindow           - FXGLMainMenuDummyScene -> FXGLLoadingScene
+23:11:30.608 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:11:30.608 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:11:30.609 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:11:30.609 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:11:30.610 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:11:30.624 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/levels/Mappa_01.tmx
+23:11:30.686 [FXGL Background Thread 2 ] WARN  TMXLevelLoader       - TiledMap generated from 1.4.1. Supported version: 1.2.3. Some features may not be parsed fully.
+23:11:30.741 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Parsed raw map: TiledMap(width=10, height=7, tilewidth=250, tileheight=250, orientation=orthogonal, layers=[Layer(width=10, height=7, name=bg, type=tilelayer, visible=false, x=0, y=0, data=[84, 67, 84, 67, 30, 47, 34, 83, 80, 83, 48, 48, 48, 45, 48, 43, 48, 48, 45, 48, 69, 69, 75, 47, 77, 69, 69, 75, 47, 82, 67, 67, 74, 47, 76, 67, 67, 74, 47, 82, 48, 48, 48, 49, 48, 48, 48, 48, 46, 40, 77, 69, 75, 47, 77, 69, 69, 75, 47, 24, 70, 81, 68, 47, 81, 81, 81, 79, 47, 82], objects=[], opacity=0.0, draworder=), Layer(width=0, height=0, name=PathWays, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[], opacity=0.0, draworder=), Layer(width=0, height=0, name=Incroci, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[com.almasb.fxgl.entity.level.tiled.TiledObject@77b0b495, com.almasb.fxgl.entity.level.tiled.TiledObject@775734b3, com.almasb.fxgl.entity.level.tiled.TiledObject@1d57cc46, com.almasb.fxgl.entity.level.tiled.TiledObject@6de3fdff, com.almasb.fxgl.entity.level.tiled.TiledObject@1f85f8ca], opacity=0.0, draworder=), Layer(width=0, height=0, name=Semafori, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[com.almasb.fxgl.entity.level.tiled.TiledObject@5139a525, com.almasb.fxgl.entity.level.tiled.TiledObject@722f66b8, com.almasb.fxgl.entity.level.tiled.TiledObject@516107, com.almasb.fxgl.entity.level.tiled.TiledObject@30228a6f, com.almasb.fxgl.entity.level.tiled.TiledObject@2cae11c3, com.almasb.fxgl.entity.level.tiled.TiledObject@25bdb848, com.almasb.fxgl.entity.level.tiled.TiledObject@2e6faca1, com.almasb.fxgl.entity.level.tiled.TiledObject@a3a2af1, com.almasb.fxgl.entity.level.tiled.TiledObject@56c6027c, com.almasb.fxgl.entity.level.tiled.TiledObject@1ef19f14, com.almasb.fxgl.entity.level.tiled.TiledObject@4da822cf, com.almasb.fxgl.entity.level.tiled.TiledObject@161ef429, com.almasb.fxgl.entity.level.tiled.TiledObject@702dc174, com.almasb.fxgl.entity.level.tiled.TiledObject@6236e95a, com.almasb.fxgl.entity.level.tiled.TiledObject@6e041189, com.almasb.fxgl.entity.level.tiled.TiledObject@f5a1fdc], opacity=0.0, draworder=), Layer(width=0, height=0, name=SpawnPoint, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[com.almasb.fxgl.entity.level.tiled.TiledObject@11e24922, com.almasb.fxgl.entity.level.tiled.TiledObject@44cb0e7d, com.almasb.fxgl.entity.level.tiled.TiledObject@a0dd734, com.almasb.fxgl.entity.level.tiled.TiledObject@55f68d56, com.almasb.fxgl.entity.level.tiled.TiledObject@565e7593, com.almasb.fxgl.entity.level.tiled.TiledObject@4afa21c3, com.almasb.fxgl.entity.level.tiled.TiledObject@2e2aebdf, com.almasb.fxgl.entity.level.tiled.TiledObject@4f574f71, com.almasb.fxgl.entity.level.tiled.TiledObject@6a0049e5, com.almasb.fxgl.entity.level.tiled.TiledObject@716f895f, com.almasb.fxgl.entity.level.tiled.TiledObject@862f0be, com.almasb.fxgl.entity.level.tiled.TiledObject@7d3b0a04, com.almasb.fxgl.entity.level.tiled.TiledObject@151c3b27, com.almasb.fxgl.entity.level.tiled.TiledObject@18b47daa, com.almasb.fxgl.entity.level.tiled.TiledObject@7cc9902, com.almasb.fxgl.entity.level.tiled.TiledObject@2282c8d5, com.almasb.fxgl.entity.level.tiled.TiledObject@56331aa1, com.almasb.fxgl.entity.level.tiled.TiledObject@6dd174e0, com.almasb.fxgl.entity.level.tiled.TiledObject@e36f4d1, com.almasb.fxgl.entity.level.tiled.TiledObject@3a4641a2, com.almasb.fxgl.entity.level.tiled.TiledObject@74eeb259, com.almasb.fxgl.entity.level.tiled.TiledObject@127ebe50, com.almasb.fxgl.entity.level.tiled.TiledObject@2bd740b2, com.almasb.fxgl.entity.level.tiled.TiledObject@23944f3b, com.almasb.fxgl.entity.level.tiled.TiledObject@22e95d6a, com.almasb.fxgl.entity.level.tiled.TiledObject@4502fb59, com.almasb.fxgl.entity.level.tiled.TiledObject@54c1e19b, com.almasb.fxgl.entity.level.tiled.TiledObject@552d81af], opacity=0.0, draworder=)], tilesets=[Tileset(firstgid=1, image=../textures/tiles_sheet.png, name=tiles_sheet, tilewidth=250, tileheight=250, imagewidth=1750, imageheight=1500, margin=0, spacing=0, columns=7, tilecount=42, transparentcolor=ff00ff, tiles=[]), Tileset(firstgid=43, image=../textures/tiles_sheet.png, name=tiles_sheet, tilewidth=250, tileheight=250, imagewidth=1750, imageheight=1500, margin=0, spacing=0, columns=7, tilecount=42, transparentcolor=, tiles=[])], backgroundcolor=, renderorder=right-down, nextobjectid=58, version=1, tiledversion=1.4.1, type=map, infinite=false, hexsidelength=0, staggeraxis=, staggerindex=, properties={}, propertytypes={})
+23:11:30.743 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating tile layer entities
+23:11:30.749 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Loading view for layer bg
+23:11:30.782 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Created buffer with size 2500.0x1750.0
+23:11:30.858 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,0, w=250,h=250, src=1500,1250
+23:11:30.859 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,0, w=250,h=250, src=750,750
+23:11:30.859 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,0, w=250,h=250, src=1500,1250
+23:11:30.860 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,0, w=250,h=250, src=750,750
+23:11:30.860 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,0, w=250,h=250, src=250,1000
+23:11:30.860 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,0, w=250,h=250, src=1000,0
+23:11:30.861 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,0, w=250,h=250, src=1250,1000
+23:11:30.861 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,0, w=250,h=250, src=1250,1250
+23:11:30.861 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,0, w=250,h=250, src=500,1250
+23:11:30.861 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,0, w=250,h=250, src=1250,1250
+23:11:30.861 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,250, w=250,h=250, src=1250,0
+23:11:30.862 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,250, w=250,h=250, src=1250,0
+23:11:30.862 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,250, w=250,h=250, src=1250,0
+23:11:30.862 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,250, w=250,h=250, src=500,0
+23:11:30.862 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,250, w=250,h=250, src=1250,0
+23:11:30.862 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,250, w=250,h=250, src=0,0
+23:11:30.863 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,250, w=250,h=250, src=1250,0
+23:11:30.863 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,250, w=250,h=250, src=1250,0
+23:11:30.863 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,250, w=250,h=250, src=500,0
+23:11:30.863 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,250, w=250,h=250, src=1250,0
+23:11:30.863 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,500, w=250,h=250, src=1250,750
+23:11:30.864 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,500, w=250,h=250, src=1250,750
+23:11:30.864 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,500, w=250,h=250, src=1000,1000
+23:11:30.864 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,500, w=250,h=250, src=1000,0
+23:11:30.864 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,500, w=250,h=250, src=1500,1000
+23:11:30.864 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,500, w=250,h=250, src=1250,750
+23:11:30.865 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,500, w=250,h=250, src=1250,750
+23:11:30.865 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,500, w=250,h=250, src=1000,1000
+23:11:30.867 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,500, w=250,h=250, src=1000,0
+23:11:30.867 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,500, w=250,h=250, src=1000,1250
+23:11:30.868 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,750, w=250,h=250, src=750,750
+23:11:30.868 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,750, w=250,h=250, src=750,750
+23:11:30.868 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,750, w=250,h=250, src=750,1000
+23:11:30.869 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,750, w=250,h=250, src=1000,0
+23:11:30.869 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,750, w=250,h=250, src=1250,1000
+23:11:30.869 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,750, w=250,h=250, src=750,750
+23:11:30.870 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,750, w=250,h=250, src=750,750
+23:11:30.871 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,750, w=250,h=250, src=750,1000
+23:11:30.872 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,750, w=250,h=250, src=1000,0
+23:11:30.873 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,750, w=250,h=250, src=1000,1250
+23:11:30.873 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,1000, w=250,h=250, src=1250,0
+23:11:30.873 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,1000, w=250,h=250, src=1250,0
+23:11:30.873 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,1000, w=250,h=250, src=1250,0
+23:11:30.874 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,1000, w=250,h=250, src=1500,0
+23:11:30.874 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,1000, w=250,h=250, src=1250,0
+23:11:30.874 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,1000, w=250,h=250, src=1250,0
+23:11:30.874 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,1000, w=250,h=250, src=1250,0
+23:11:30.875 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,1000, w=250,h=250, src=1250,0
+23:11:30.875 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,1000, w=250,h=250, src=750,0
+23:11:30.875 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,1000, w=250,h=250, src=1000,1250
+23:11:30.875 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,1250, w=250,h=250, src=1500,1000
+23:11:30.876 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,1250, w=250,h=250, src=1250,750
+23:11:30.876 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,1250, w=250,h=250, src=1000,1000
+23:11:30.876 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,1250, w=250,h=250, src=1000,0
+23:11:30.877 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,1250, w=250,h=250, src=1500,1000
+23:11:30.877 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,1250, w=250,h=250, src=1250,750
+23:11:30.878 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,1250, w=250,h=250, src=1250,750
+23:11:30.879 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,1250, w=250,h=250, src=1000,1000
+23:11:30.879 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,1250, w=250,h=250, src=1000,0
+23:11:30.879 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,1250, w=250,h=250, src=500,750
+23:11:30.880 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,1500, w=250,h=250, src=1500,750
+23:11:30.880 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,1500, w=250,h=250, src=750,1250
+23:11:30.880 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,1500, w=250,h=250, src=1000,750
+23:11:30.880 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,1500, w=250,h=250, src=1000,0
+23:11:30.881 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,1500, w=250,h=250, src=750,1250
+23:11:30.881 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,1500, w=250,h=250, src=750,1250
+23:11:30.881 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,1500, w=250,h=250, src=750,1250
+23:11:30.881 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,1500, w=250,h=250, src=250,1250
+23:11:30.881 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2000,1500, w=250,h=250, src=1000,0
+23:11:30.882 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=2250,1500, w=250,h=250, src=1000,1250
+23:11:30.882 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating object layer entities
+23:11:30.916 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoRosso-01.png
+23:11:30.923 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoVerde-01.png
+23:11:30.929 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoRosso-02.png
+23:11:30.935 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoVerde-02.png
+23:11:30.938 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoRosso-04.png
+23:11:30.941 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoVerde-04.png
+23:11:30.943 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoRosso-03.png
+23:11:30.950 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/semaforoVerde-03.png
+23:11:30.956 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:30.956 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:30.957 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-01.png
+23:11:30.957 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-01.png
+23:11:30.962 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:30.963 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:30.967 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:30.967 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:30.968 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:30.969 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:30.977 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:30.978 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:30.980 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-01.png
+23:11:30.981 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-01.png
+23:11:30.982 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:30.982 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:30.983 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:30.983 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:30.984 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:30.984 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:30.989 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:30.989 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:30.993 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:30.993 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:31.025 [FXGL Background Thread 2 ] DEBUG GameWorld            - Clearing removable entities
+23:11:31.028 [FXGL Background Thread 2 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@a2e6245
+23:11:31.040 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/textures/pointer-sprite.png
+23:11:31.088 [FXGL Background Thread 2 ] INFO  FXGLApplication      - Game initialization took: 0,477 sec
+23:11:31.088 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:31.098 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to GameScene
+23:11:31.102 [JavaFX Application Thread] DEBUG MainWindow           - FXGLLoadingScene -> GameScene
+23:11:32.684 [JavaFX Application Thread] DEBUG MainWindow           - Push state: FXGLDefaultMenu
+23:11:32.692 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:32.694 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLDefaultMenu
+23:11:32.697 [JavaFX Application Thread] DEBUG MainWindow           - GameScene -> FXGLDefaultMenu
+23:11:34.680 [JavaFX Application Thread] DEBUG MainWindow           - Pop state: FXGLDefaultMenu
+23:11:34.680 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:34.681 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLDefaultMenu and adding to GameScene
+23:11:34.682 [JavaFX Application Thread] DEBUG MainWindow           - GameScene <- FXGLDefaultMenu
+23:11:35.102 [JavaFX Application Thread] DEBUG MainWindow           - Push state: FXGLDefaultMenu
+23:11:35.103 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:35.104 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLDefaultMenu
+23:11:35.106 [JavaFX Application Thread] DEBUG MainWindow           - GameScene -> FXGLDefaultMenu
+23:11:36.632 [JavaFX Application Thread] DEBUG Menu                 - fireExitToMainMenu()
+23:11:36.638 [JavaFX Application Thread] DEBUG MainWindow           - Push state: DialogSubScene
+23:11:36.638 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:36.638 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLDefaultMenu and adding to DialogSubScene
+23:11:36.639 [JavaFX Application Thread] DEBUG MainWindow           - FXGLDefaultMenu -> DialogSubScene
+23:11:38.057 [JavaFX Application Thread] DEBUG MainWindow           - Pop state: DialogSubScene
+23:11:38.057 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:38.058 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from DialogSubScene and adding to FXGLDefaultMenu
+23:11:38.059 [JavaFX Application Thread] DEBUG MainWindow           - FXGLDefaultMenu <- DialogSubScene
+23:11:38.059 [JavaFX Application Thread] DEBUG MainWindow           - Pop state: FXGLDefaultMenu
+23:11:38.059 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:38.060 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLDefaultMenu and adding to GameScene
+23:11:38.060 [JavaFX Application Thread] DEBUG MainWindow           - GameScene <- FXGLDefaultMenu
+23:11:38.060 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:38.075 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from GameScene and adding to FXGLMainMenuDummyScene
+23:11:38.084 [JavaFX Application Thread] DEBUG MainWindow           - GameScene -> FXGLMainMenuDummyScene
+23:11:38.085 [JavaFX Application Thread] DEBUG MainWindow           - Push state: TrafficAppMenu
+23:11:38.085 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:38.086 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to TrafficAppMenu
+23:11:38.087 [JavaFX Application Thread] DEBUG MainWindow           - FXGLMainMenuDummyScene -> TrafficAppMenu
+23:11:40.913 [JavaFX Application Thread] DEBUG Menu                 - fireNewGame()
+23:11:40.914 [JavaFX Application Thread] DEBUG GameApplicationServi - Starting new game
+23:11:40.914 [JavaFX Application Thread] DEBUG MainWindow           - Pop state: TrafficAppMenu
+23:11:40.914 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:40.915 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from TrafficAppMenu and adding to FXGLMainMenuDummyScene
+23:11:40.917 [JavaFX Application Thread] DEBUG MainWindow           - FXGLMainMenuDummyScene <- TrafficAppMenu
+23:11:40.917 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:40.925 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLMainMenuDummyScene and adding to FXGLLoadingScene
+23:11:40.926 [JavaFX Application Thread] DEBUG MainWindow           - FXGLMainMenuDummyScene -> FXGLLoadingScene
+23:11:40.926 [JavaFX Application Thread] DEBUG GameApplicationServi - Clearing previous game
+23:11:40.926 [JavaFX Application Thread] DEBUG GameScene            - Clearing game scene
+23:11:40.926 [JavaFX Application Thread] DEBUG GameWorld            - Clearing game world
+23:11:40.928 [JavaFX Application Thread] DEBUG PhysicsWorld         - Clearing physics world
+23:11:40.929 [FXGL Background Thread 2 ] DEBUG FXGLApplication      - Initializing game
+23:11:40.930 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from file system: /assets/levels/Mappa_16-9-v2.tmx
+23:11:40.934 [FXGL Background Thread 2 ] WARN  TMXLevelLoader       - TiledMap generated from 1.4.1. Supported version: 1.2.3. Some features may not be parsed fully.
+23:11:40.973 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Parsed raw map: TiledMap(width=16, height=9, tilewidth=125, tileheight=125, orientation=orthogonal, layers=[Layer(width=16, height=9, name=Tile Layer 1, type=tilelayer, visible=false, x=0, y=0, data=[24, 24, 24, 26, 5, 28, 24, 24, 24, 24, 24, 26, 5, 28, 24, 24, 25, 25, 25, 32, 5, 34, 25, 25, 25, 25, 25, 32, 5, 34, 25, 25, 6, 6, 6, 6, 7, 6, 6, 6, 6, 6, 6, 6, 7, 6, 6, 6, 27, 27, 27, 33, 5, 21, 13, 13, 13, 13, 13, 19, 5, 35, 27, 27, 24, 24, 24, 26, 5, 14, 10, 10, 10, 10, 10, 12, 5, 28, 24, 24, 25, 25, 25, 32, 5, 20, 11, 11, 11, 11, 11, 18, 5, 34, 25, 25, 6, 6, 6, 6, 7, 6, 6, 6, 6, 6, 6, 6, 7, 6, 6, 6, 27, 27, 27, 33, 5, 35, 27, 27, 27, 27, 27, 33, 5, 35, 27, 27, 24, 24, 24, 26, 5, 28, 24, 24, 24, 24, 24, 26, 5, 28, 24, 24], objects=[], opacity=0.0, draworder=), Layer(width=0, height=0, name=spawnpoints, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[com.almasb.fxgl.entity.level.tiled.TiledObject@62a420c2, com.almasb.fxgl.entity.level.tiled.TiledObject@6fb71c0f, com.almasb.fxgl.entity.level.tiled.TiledObject@1a2bc2be, com.almasb.fxgl.entity.level.tiled.TiledObject@34d208d4, com.almasb.fxgl.entity.level.tiled.TiledObject@77b38cbc, com.almasb.fxgl.entity.level.tiled.TiledObject@2033b121, com.almasb.fxgl.entity.level.tiled.TiledObject@64c9a9ab, com.almasb.fxgl.entity.level.tiled.TiledObject@4079994e], opacity=0.0, draworder=), Layer(width=0, height=0, name=paths, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[com.almasb.fxgl.entity.level.tiled.TiledObject@2b442b91, com.almasb.fxgl.entity.level.tiled.TiledObject@16c33d61, com.almasb.fxgl.entity.level.tiled.TiledObject@3f6e5ae3, com.almasb.fxgl.entity.level.tiled.TiledObject@335117a9, com.almasb.fxgl.entity.level.tiled.TiledObject@39c3aaf1, com.almasb.fxgl.entity.level.tiled.TiledObject@3664a09d, com.almasb.fxgl.entity.level.tiled.TiledObject@7b105df0, com.almasb.fxgl.entity.level.tiled.TiledObject@4047f164, com.almasb.fxgl.entity.level.tiled.TiledObject@64774fbf, com.almasb.fxgl.entity.level.tiled.TiledObject@77047be4, com.almasb.fxgl.entity.level.tiled.TiledObject@e824729, com.almasb.fxgl.entity.level.tiled.TiledObject@71314b4c, com.almasb.fxgl.entity.level.tiled.TiledObject@2f65e862, com.almasb.fxgl.entity.level.tiled.TiledObject@7b6a7d31, com.almasb.fxgl.entity.level.tiled.TiledObject@674dc67a, com.almasb.fxgl.entity.level.tiled.TiledObject@1c5d9af4, com.almasb.fxgl.entity.level.tiled.TiledObject@1cfb57e5, com.almasb.fxgl.entity.level.tiled.TiledObject@345022be, com.almasb.fxgl.entity.level.tiled.TiledObject@3da74c58, com.almasb.fxgl.entity.level.tiled.TiledObject@4d5deb22, com.almasb.fxgl.entity.level.tiled.TiledObject@bdfc913, com.almasb.fxgl.entity.level.tiled.TiledObject@3e2f5f04, com.almasb.fxgl.entity.level.tiled.TiledObject@396d0115, com.almasb.fxgl.entity.level.tiled.TiledObject@1b4bf9e1], opacity=0.0, draworder=), Layer(width=0, height=0, name=trafficLight, type=objectgroup, visible=false, x=0, y=0, data=[], objects=[com.almasb.fxgl.entity.level.tiled.TiledObject@6e293cca, com.almasb.fxgl.entity.level.tiled.TiledObject@2a3a8974, com.almasb.fxgl.entity.level.tiled.TiledObject@7b0e408f, com.almasb.fxgl.entity.level.tiled.TiledObject@3fce3afe, com.almasb.fxgl.entity.level.tiled.TiledObject@18a69ea1, com.almasb.fxgl.entity.level.tiled.TiledObject@6629d5e8, com.almasb.fxgl.entity.level.tiled.TiledObject@6f2aeb9a, com.almasb.fxgl.entity.level.tiled.TiledObject@217d354b, com.almasb.fxgl.entity.level.tiled.TiledObject@d82f453, com.almasb.fxgl.entity.level.tiled.TiledObject@252cf69e, com.almasb.fxgl.entity.level.tiled.TiledObject@1d62af9a, com.almasb.fxgl.entity.level.tiled.TiledObject@557d0610, com.almasb.fxgl.entity.level.tiled.TiledObject@4fc74080, com.almasb.fxgl.entity.level.tiled.TiledObject@d9dc7e0, com.almasb.fxgl.entity.level.tiled.TiledObject@50ba7b6, com.almasb.fxgl.entity.level.tiled.TiledObject@38fb7c81], opacity=0.0, draworder=)], tilesets=[Tileset(firstgid=1, image=../textures/rsz_tiles_sheet.png, name=rsz_tiles_sheet, tilewidth=125, tileheight=125, imagewidth=875, imageheight=750, margin=0, spacing=0, columns=7, tilecount=42, transparentcolor=41ffef, tiles=[])], backgroundcolor=, renderorder=left-up, nextobjectid=62, version=1, tiledversion=1.4.1, type=map, infinite=false, hexsidelength=0, staggeraxis=, staggerindex=, properties={}, propertytypes={})
+23:11:40.973 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating tile layer entities
+23:11:40.975 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Loading view for layer Tile Layer 1
+23:11:40.976 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Created buffer with size 2000.0x1125.0
+23:11:41.225 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,0, w=125,h=125, src=250,375
+23:11:41.225 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,0, w=125,h=125, src=250,375
+23:11:41.225 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,0, w=125,h=125, src=250,375
+23:11:41.225 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,0, w=125,h=125, src=500,375
+23:11:41.226 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,0, w=125,h=125, src=500,0
+23:11:41.226 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,0, w=125,h=125, src=750,375
+23:11:41.227 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,0, w=125,h=125, src=250,375
+23:11:41.227 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,0, w=125,h=125, src=250,375
+23:11:41.230 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,0, w=125,h=125, src=250,375
+23:11:41.230 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,0, w=125,h=125, src=250,375
+23:11:41.230 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,0, w=125,h=125, src=250,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,0, w=125,h=125, src=500,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,0, w=125,h=125, src=500,0
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,0, w=125,h=125, src=750,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,0, w=125,h=125, src=250,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,0, w=125,h=125, src=250,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,125, w=125,h=125, src=375,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,125, w=125,h=125, src=375,375
+23:11:41.231 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,125, w=125,h=125, src=375,375
+23:11:41.238 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,125, w=125,h=125, src=375,500
+23:11:41.238 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,125, w=125,h=125, src=500,0
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,125, w=125,h=125, src=625,500
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,125, w=125,h=125, src=375,375
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,125, w=125,h=125, src=375,375
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,125, w=125,h=125, src=375,375
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,125, w=125,h=125, src=375,375
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,125, w=125,h=125, src=375,375
+23:11:41.239 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,125, w=125,h=125, src=375,500
+23:11:41.240 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,125, w=125,h=125, src=500,0
+23:11:41.240 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,125, w=125,h=125, src=625,500
+23:11:41.240 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,125, w=125,h=125, src=375,375
+23:11:41.240 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,125, w=125,h=125, src=375,375
+23:11:41.240 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,250, w=125,h=125, src=625,0
+23:11:41.240 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,250, w=125,h=125, src=625,0
+23:11:41.241 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,250, w=125,h=125, src=750,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,250, w=125,h=125, src=625,0
+23:11:41.242 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,250, w=125,h=125, src=625,0
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,250, w=125,h=125, src=625,0
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,250, w=125,h=125, src=750,0
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,250, w=125,h=125, src=625,0
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,250, w=125,h=125, src=625,0
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,250, w=125,h=125, src=625,0
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,375, w=125,h=125, src=625,375
+23:11:41.243 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,375, w=125,h=125, src=625,375
+23:11:41.246 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,375, w=125,h=125, src=625,375
+23:11:41.246 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,375, w=125,h=125, src=500,500
+23:11:41.246 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,375, w=125,h=125, src=500,0
+23:11:41.246 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,375, w=125,h=125, src=750,250
+23:11:41.246 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,375, w=125,h=125, src=625,125
+23:11:41.246 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,375, w=125,h=125, src=625,125
+23:11:41.247 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,375, w=125,h=125, src=625,125
+23:11:41.247 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,375, w=125,h=125, src=625,125
+23:11:41.262 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,375, w=125,h=125, src=625,125
+23:11:41.262 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,375, w=125,h=125, src=500,250
+23:11:41.263 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,375, w=125,h=125, src=500,0
+23:11:41.263 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,375, w=125,h=125, src=750,500
+23:11:41.263 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,375, w=125,h=125, src=625,375
+23:11:41.263 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,375, w=125,h=125, src=625,375
+23:11:41.264 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,500, w=125,h=125, src=250,375
+23:11:41.264 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,500, w=125,h=125, src=250,375
+23:11:41.264 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,500, w=125,h=125, src=250,375
+23:11:41.264 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,500, w=125,h=125, src=500,375
+23:11:41.265 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,500, w=125,h=125, src=500,0
+23:11:41.265 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,500, w=125,h=125, src=750,125
+23:11:41.265 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,500, w=125,h=125, src=250,125
+23:11:41.265 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,500, w=125,h=125, src=250,125
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,500, w=125,h=125, src=250,125
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,500, w=125,h=125, src=250,125
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,500, w=125,h=125, src=250,125
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,500, w=125,h=125, src=500,125
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,500, w=125,h=125, src=500,0
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,500, w=125,h=125, src=750,375
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,500, w=125,h=125, src=250,375
+23:11:41.271 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,500, w=125,h=125, src=250,375
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,625, w=125,h=125, src=375,375
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,625, w=125,h=125, src=375,375
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,625, w=125,h=125, src=375,375
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,625, w=125,h=125, src=375,500
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,625, w=125,h=125, src=500,0
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,625, w=125,h=125, src=625,250
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,625, w=125,h=125, src=375,125
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,625, w=125,h=125, src=375,125
+23:11:41.272 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,625, w=125,h=125, src=375,125
+23:11:41.273 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,625, w=125,h=125, src=375,125
+23:11:41.273 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,625, w=125,h=125, src=375,125
+23:11:41.276 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,625, w=125,h=125, src=375,250
+23:11:41.276 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,625, w=125,h=125, src=500,0
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,625, w=125,h=125, src=625,500
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,625, w=125,h=125, src=375,375
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,625, w=125,h=125, src=375,375
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,750, w=125,h=125, src=625,0
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,750, w=125,h=125, src=625,0
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,750, w=125,h=125, src=625,0
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,750, w=125,h=125, src=625,0
+23:11:41.277 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,750, w=125,h=125, src=750,0
+23:11:41.278 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,750, w=125,h=125, src=625,0
+23:11:41.278 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,750, w=125,h=125, src=625,0
+23:11:41.279 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,750, w=125,h=125, src=625,0
+23:11:41.279 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,750, w=125,h=125, src=625,0
+23:11:41.279 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,750, w=125,h=125, src=625,0
+23:11:41.279 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,750, w=125,h=125, src=625,0
+23:11:41.281 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,750, w=125,h=125, src=625,0
+23:11:41.282 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,750, w=125,h=125, src=750,0
+23:11:41.282 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,750, w=125,h=125, src=625,0
+23:11:41.282 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,750, w=125,h=125, src=625,0
+23:11:41.282 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,750, w=125,h=125, src=625,0
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,875, w=125,h=125, src=625,375
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,875, w=125,h=125, src=625,375
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,875, w=125,h=125, src=625,375
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,875, w=125,h=125, src=500,500
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,875, w=125,h=125, src=500,0
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,875, w=125,h=125, src=750,500
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,875, w=125,h=125, src=625,375
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,875, w=125,h=125, src=625,375
+23:11:41.283 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,875, w=125,h=125, src=625,375
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,875, w=125,h=125, src=625,375
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,875, w=125,h=125, src=625,375
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,875, w=125,h=125, src=500,500
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,875, w=125,h=125, src=500,0
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,875, w=125,h=125, src=750,500
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,875, w=125,h=125, src=625,375
+23:11:41.284 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,875, w=125,h=125, src=625,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=0,1000, w=125,h=125, src=250,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=125,1000, w=125,h=125, src=250,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=250,1000, w=125,h=125, src=250,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=375,1000, w=125,h=125, src=500,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=500,1000, w=125,h=125, src=500,0
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=625,1000, w=125,h=125, src=750,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=750,1000, w=125,h=125, src=250,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=875,1000, w=125,h=125, src=250,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1000,1000, w=125,h=125, src=250,375
+23:11:41.285 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1125,1000, w=125,h=125, src=250,375
+23:11:41.286 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1250,1000, w=125,h=125, src=250,375
+23:11:41.286 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1375,1000, w=125,h=125, src=500,375
+23:11:41.286 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1500,1000, w=125,h=125, src=500,0
+23:11:41.287 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1625,1000, w=125,h=125, src=750,375
+23:11:41.287 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1750,1000, w=125,h=125, src=250,375
+23:11:41.287 [FXGL Background Thread 2 ] DEBUG TilesetLoader        - Writing to buffer: dst=1875,1000, w=125,h=125, src=250,375
+23:11:41.287 [FXGL Background Thread 2 ] DEBUG TMXLevelLoader       - Creating object layer entities
+23:11:41.301 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-01.png
+23:11:41.302 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-01.png
+23:11:41.302 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-01.png
+23:11:41.302 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-01.png
+23:11:41.303 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-01.png
+23:11:41.303 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-01.png
+23:11:41.303 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-01.png
+23:11:41.303 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-01.png
+23:11:41.304 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:41.304 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:41.304 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:41.304 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:41.305 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:41.305 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:41.305 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-04.png
+23:11:41.306 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-04.png
+23:11:41.307 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:41.307 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:41.309 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:41.309 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:41.310 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:41.310 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:41.310 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-03.png
+23:11:41.311 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-03.png
+23:11:41.311 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:41.311 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:41.312 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:41.312 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:41.312 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:41.312 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:41.313 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoRosso-02.png
+23:11:41.313 [FXGL Background Thread 2 ] DEBUG FXGLAssetLoaderServi - Loading from cache: /assets/textures/semaforoVerde-02.png
+23:11:41.313 [FXGL Background Thread 2 ] DEBUG GameWorld            - Clearing removable entities
+23:11:41.313 [FXGL Background Thread 2 ] DEBUG GameWorld            - Setting level: com.almasb.fxgl.entity.level.Level@6af7ff55
+23:11:41.385 [JavaFX Application Thread] DEBUG LoopRunner           - Stopping loop
+23:11:41.386 [JavaFX Application Thread] FATAL FXGLApplication      - Uncaught Exception:
+java.lang.RuntimeException: Initialization failed
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$InitAppTask.failed(FXGLApplication.kt:324)
+	at javafx.graphics/javafx.concurrent.Task.setState(Task.java:710)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.lambda$call$2(Task.java:1455)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$10(PlatformImpl.java:428)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:391)
+	at javafx.graphics/com.sun.javafx.application.PlatformImpl.lambda$runLater$11(PlatformImpl.java:427)
+	at javafx.graphics/com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:96)
+Caused by: java.lang.NullPointerException
+	at trafficGame.main/it.uniroma1.metodologie.trafficGame.TrafficApp.initGame(TrafficApp.java:133)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$InitAppTask.initGame(FXGLApplication.kt:320)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$InitAppTask.call(FXGLApplication.kt:300)
+	at com.almasb.fxgl.all/com.almasb.fxgl.app.FXGLApplication$InitAppTask.call(FXGLApplication.kt:292)
+	at javafx.graphics/javafx.concurrent.Task$TaskCallable.call(Task.java:1425)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+23:11:41.387 [JavaFX Application Thread] FATAL FXGLApplication      - Application will now exit
+23:11:41.390 [JavaFX Application Thread] DEBUG MainWindow           - Push state: ErrorSubScene
+23:11:41.390 [JavaFX Application Thread] DEBUG Input                - Clearing active input actions
+23:11:41.390 [JavaFX Application Thread] DEBUG GameApplicationServi - Removing overlay from FXGLLoadingScene and adding to ErrorSubScene
+23:11:41.392 [JavaFX Application Thread] DEBUG MainWindow           - FXGLLoadingScene -> ErrorSubScene
+23:11:44.619 [JavaFX Application Thread] DEBUG FXGLApplication      - Exiting FXGL
+23:11:44.619 [JavaFX Application Thread] DEBUG Async                - Shutting down background threads
+23:11:44.620 [JavaFX Application Thread] DEBUG MainWindow           - Closing main window
+23:11:44.633 [JavaFX Application Thread] DEBUG Logger               - Closing Logger
