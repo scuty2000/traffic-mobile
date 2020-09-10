@@ -29,6 +29,8 @@ import javafx.scene.shape.Rectangle;
 
 public class TrafficFactory implements EntityFactory{
 	
+	public static final double scale = 0.5;
+	
 	private Entity player1;
 	
 	private Entity player2;
@@ -44,6 +46,8 @@ public class TrafficFactory implements EntityFactory{
 				.with("pointerY", 0)
 				.with(new PlayerAnimationComponent())
 				.build();
+			player1.setScaleX(scale);
+			player1.setScaleY(scale);
 			return player1;
 		}
 		if(player2 == null)
@@ -79,6 +83,10 @@ public class TrafficFactory implements EntityFactory{
 		Rectangle f2 = new Rectangle(v.getWidth()-10, v.getHeigh() - 10, 10, 10);
 		f2.setFill(Color.YELLOW);
 		f2.setVisible(false);
+		f1.setScaleX(scale);
+		f1.setScaleY(scale);
+		f2.setScaleX(scale);
+		f2.setScaleY(scale);
 		e.getViewComponent().addChild(f1);
 		e.getViewComponent().addChild(f2);
 		e.getComponent(VehicleComponent.class).addArrows(f1, f2);
@@ -127,8 +135,7 @@ public class TrafficFactory implements EntityFactory{
 		Point2D p = getPoint(i);
 		p.add(data.getX(), data.getY());
 		
-		HitBox h = new HitBox(p, BoundingShape.box(40, 40));
-
+		HitBox h = new HitBox(p, BoundingShape.box(20, 20));
 		e.getBoundingBoxComponent().addHitBox(h);
 		
 		return e;
@@ -137,13 +144,13 @@ public class TrafficFactory implements EntityFactory{
 	private Point2D getPoint(int i) {
 		switch(i) {
 		case 1:
-			return new Point2D(295,210);
+			return new Point2D(147.5,105);
 		case 2:
-			return new Point2D(0, 295);
+			return new Point2D(0, 147.5);
 		case 3:
-			return new Point2D(-80, 0);
+			return new Point2D(-40, 0);
 		default:
-			return new Point2D(210, -80);
+			return new Point2D(105, -40);
 		}
 	}
 	
@@ -151,7 +158,7 @@ public class TrafficFactory implements EntityFactory{
 	public Entity getIncrocioA4(SpawnData data) {
 		return FXGL.entityBuilder(data)
 					.type(EntityType.INCROCIO)
-					.bbox(new HitBox(BoundingShape.box(250, 250)))
+					.bbox(new HitBox(BoundingShape.box(125, 125)))
 					.with(new CrossRoadComponent())
 					.with(new CollidableComponent(true))
 					.build();
@@ -161,7 +168,7 @@ public class TrafficFactory implements EntityFactory{
 	public Entity getIncrocioA3(SpawnData data) {
 		return FXGL.entityBuilder(data)
 					.type(EntityType.INCROCIO)
-					.bbox(new HitBox(BoundingShape.box(250, 250)))
+					.bbox(new HitBox(BoundingShape.box(125, 125)))
 					.with("direzione", data.get("direzione"))
 					.with(new CollidableComponent(true))
 					.with(new CrossRoadComponent())
@@ -182,13 +189,13 @@ public class TrafficFactory implements EntityFactory{
 		return e;
 	}
 	
-	private final int SPAWN_WIDTH = 100;
+	private final int SPAWN_WIDTH = 50;
 	private List<Object> calcOffsetSpawn(String d) {
 		switch(Directions.valueOf(d)) {
-		case UP:return List.of(new Point2D(-5, -SPAWN_WIDTH),BoundingShape.box(10, SPAWN_WIDTH));
-		case DOWN:return List.of(new Point2D(-5, 0),BoundingShape.box(10, SPAWN_WIDTH));
-		case LEFT:return List.of(new Point2D(-SPAWN_WIDTH, -5),BoundingShape.box(SPAWN_WIDTH, 10));
-		case RIGHT:return List.of(new Point2D(0, -5),BoundingShape.box(SPAWN_WIDTH, 10));
+		case UP:return List.of(new Point2D(-2.5, -SPAWN_WIDTH),BoundingShape.box(2.5, SPAWN_WIDTH));
+		case DOWN:return List.of(new Point2D(-2.5, 0),BoundingShape.box(2.5, SPAWN_WIDTH));
+		case LEFT:return List.of(new Point2D(-SPAWN_WIDTH, -2.5),BoundingShape.box(SPAWN_WIDTH, 2.5));
+		case RIGHT:return List.of(new Point2D(0, -2.5),BoundingShape.box(SPAWN_WIDTH, 2.5));
 		}
 		return null;
 	}
@@ -199,7 +206,7 @@ public class TrafficFactory implements EntityFactory{
 					.type(EntityType.PATH)
 					.with(new CollidableComponent(true))
 					.opacity(0)
-					.viewWithBBox(new Rectangle((int)data.get("width") == 0 ? 4 : (int)data.get("width"), (int)data.get("height") == 0 ? 4 : (int)data.get("height")))
+					.viewWithBBox(new Rectangle((int)data.get("width") == 0 ? 2 : (int)data.get("width"), (int)data.get("height") == 0 ? 2 : (int)data.get("height")))
 					//.bbox(new HitBox(BoundingShape.chain(new Point2D((float)data.getX(),(float)data.getY()), new Point2D(data.getX() + (int)data.get("width"),data.getY() + (int)data.get("height")))))
 					//.with("direzione", data.get("direzione"))
 					.with(new PathComponent())
