@@ -439,22 +439,22 @@ public class TrafficApp extends GameApplication {
 
 	@Override
 	protected void onUpdate(double tpf) {
-//				if(SCORE_TIMER.elapsed(Duration.seconds(1))) {
-//					FXGL.getWorldProperties().increment("score", pointsPerSec/5);
-//					FXGL.getGameScene().clearUINodes();
-//					Text uiText = new Text("Score : " + FXGL.getWorldProperties().getInt("score"));
-//					uiText.setFont(Font.font(30));
-//					// 2. add the UI object to game scene (easy way) at 100, 100
-//					FXGL.addUINode(uiText, 10, 30);
-//					SCORE_TIMER.capture();
-//				}
-//				if(counter > spawnRate) {
-//					spawnCar();
-//					counter = 0;
-//					if(spawnRate > minSpawnRate)
-//						spawnRate--;
-//				}
-//				counter ++;
+				if(SCORE_TIMER.elapsed(Duration.seconds(1))) {
+					FXGL.getWorldProperties().increment("score", pointsPerSec/5);
+					FXGL.getGameScene().clearUINodes();
+					Text uiText = new Text("Score : " + FXGL.getWorldProperties().getInt("score"));
+					uiText.setFont(Font.font(30));
+					// 2. add the UI object to game scene (easy way) at 100, 100
+					FXGL.addUINode(uiText, 10, 30);
+					SCORE_TIMER.capture();
+				}
+				if(counter > spawnRate) {
+					spawnCar();
+					counter = 0;
+					if(spawnRate > minSpawnRate)
+						spawnRate--;
+				}
+				counter ++;
 	}
 
 	private int pointsPerSec;
