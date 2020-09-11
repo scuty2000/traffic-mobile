@@ -3,7 +3,7 @@
  <tileset firstgid="1" name="rsz_tiles_sheet" tilewidth="125" tileheight="125" tilecount="42" columns="7">
   <image source="../textures/rsz_tiles_sheet.png" trans="41ffef" width="875" height="750"/>
  </tileset>
- <layer id="1" name="Tile Layer 1" width="16" height="9">
+ <layer id="1" name="Tile Layer 1" width="16" height="9" locked="1">
   <data encoding="csv">
 37,39,24,39,5,28,41,41,41,41,41,26,5,37,39,39,
 39,25,39,32,5,34,25,41,25,41,25,32,5,34,39,39,
@@ -74,7 +74,7 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="3" name="paths" locked="1">
+ <objectgroup id="3" name="paths">
   <object id="10" name="path" type="path" x="593.75" y="875" height="250">
    <properties>
     <property name="direzione" value="UP"/>
