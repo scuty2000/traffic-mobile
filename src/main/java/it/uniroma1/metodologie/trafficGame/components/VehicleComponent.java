@@ -238,7 +238,6 @@ public class VehicleComponent extends Component{
 	
 	private double TURN_GAP;
 	private LocalTimer turnTimer;
-	private int arrayUsed;
 	
 	@SuppressWarnings("unchecked")
 	private void turnAnimation() {
@@ -248,28 +247,20 @@ public class VehicleComponent extends Component{
 			if(turning)
 				if(this.oldDirection.equals(Directions.RIGHT) && this.d.equals(Directions.DOWN)){
 					entity.translate(arrayCurve.get(4).remove(0));
-					arrayUsed = 4;
 				} else if(this.oldDirection.equals(Directions.RIGHT) && this.d.equals(Directions.UP)) {
 					entity.translate(arrayCurve.get(3).remove(arrayCurve.get(3).size()-1));
-					arrayUsed = 3;
 				} else if(this.oldDirection.equals(Directions.UP) && this.d.equals(Directions.RIGHT)) {
 					entity.translate(arrayCurve.get(7).remove(0));
-					arrayUsed = 7;
 				} else if(this.oldDirection.equals(Directions.UP) && this.d.equals(Directions.LEFT)) {
 					entity.translate(arrayCurve.get(2).remove(arrayCurve.get(2).size()-1));
-					arrayUsed = 2;
 				} else if(this.oldDirection.equals(Directions.LEFT) && this.d.equals(Directions.UP)) {
 					entity.translate(arrayCurve.get(6).remove(0));
-					arrayUsed = 6;
 				} else if(this.oldDirection.equals(Directions.LEFT) && this.d.equals(Directions.DOWN)) {
 					entity.translate(arrayCurve.get(1).remove(arrayCurve.get(1).size()-1));
-					arrayUsed = 1;
 				} else if(this.oldDirection.equals(Directions.DOWN) && this.d.equals(Directions.RIGHT)) {
 					entity.translate(arrayCurve.get(0).remove(arrayCurve.get(0).size()-1));
-					arrayUsed = 0;
 				} else if(this.oldDirection.equals(Directions.DOWN) && this.d.equals(Directions.LEFT)) { // TODO tune this
 					entity.translate(arrayCurve.get(5).remove(0));
-					arrayUsed = 5;
 				}
 			
 			if(debugCurve)

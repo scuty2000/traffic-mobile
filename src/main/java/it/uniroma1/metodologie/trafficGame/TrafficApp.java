@@ -69,9 +69,9 @@ public class TrafficApp extends GameApplication {
 
 	public void setMinSpawnRate(String difficulty) {
 		switch(difficulty) {
-			case "EASY" : this.minSpawnRate = EASY;
-			case "MEDIUM" : this.minSpawnRate = MEDIUM;
-			case "HARD" : this.minSpawnRate = HARD;
+			case "EASY" : this.minSpawnRate = EASY; break;
+			case "MEDIUM" : this.minSpawnRate = MEDIUM; break;
+			case "HARD" : this.minSpawnRate = HARD; break;
 			default : throw new IllegalArgumentException("Unexpected value: " + difficulty);
 		}
 	}
