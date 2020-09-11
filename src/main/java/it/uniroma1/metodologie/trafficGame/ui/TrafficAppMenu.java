@@ -141,8 +141,8 @@ public class TrafficAppMenu extends FXGLMenu {
 		
 		mapBox.getChildren().addAll(
 				new TrafficButton("Mappa 01", () -> setMap("Mappa_01.tmx")),
-				placeholder4,
-				placeholder5,
+				new TrafficButton("Mappa 02", () -> setMap("Mappa_02.tmx")),
+				new TrafficButton("Mappa 03", () -> setMap("Mappa_03.tmx")),
 				placeholder6,
 				new TrafficButton("Indietro", () -> toggleMap()),
 				new Text(""),
