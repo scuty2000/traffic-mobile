@@ -511,7 +511,7 @@ public class TrafficApp extends GameApplication {
 
 	private static Entity nextPathFinder(String current, String[] strings, Directions oldDir, boolean canTurn) {
 		//lista dei possibili path
-		List<Entity> l = Arrays.stream(strings).map(x -> findPath(x)).filter(x -> x != null).sorted(Comparator.comparing(x -> Directions.valueOf((String) ((Entity)x).getPropertyOptional("direzione").orElseThrow()).equals(oldDir) ? 0 : 1)).collect(Collectors.toList());
+		List<Entity> l = Arrays.stream(strings).map(x -> findPath(x)).filter(x -> x != null).sorted(Comparator.comparing(x -> {System.out.println(((Entity)x).getPropertyOptional("direzione").orElseThrow());return Directions.valueOf((String) ((Entity)x).getPropertyOptional("direzione").orElseThrow()).equals(oldDir) ? 0 : 1;})).collect(Collectors.toList());
 		Random r = new Random();
 		if(l.isEmpty()) return null;
 		int i = r.nextInt(l.size() + 1);

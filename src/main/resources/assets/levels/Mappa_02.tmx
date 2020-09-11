@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="right-down" width="16" height="9" tilewidth="125" tileheight="125" infinite="0" nextlayerid="6" nextobjectid="58">
- <tileset firstgid="1" source="rsz_tiles_sheet-2.tsx"/>
- <layer id="1" name="Livello tile 1" width="16" height="9" locked="1">
+ <tileset firstgid="1" name="rsz_tiles_sheet" tilewidth="125" tileheight="125" tilecount="42" columns="7">
+  <image source="../textures/rsz_tiles_sheet.png" width="875" height="750"/>
+ </tileset>
+ <layer id="1" name="Livello tile 1" width="16" height="9">
   <data encoding="csv">
-41,42,37,42,39,38,39,40,33,5,28,26,5,28,39,39,
-25,25,25,25,25,25,25,25,32,5,34,32,5,34,25,25,
+41,38,41,41,24,24,37,39,26,5,28,26,5,28,39,39,
+39,39,38,39,25,25,39,37,32,5,34,32,5,34,25,37,
 6,6,6,6,3,6,6,6,6,1,6,6,7,6,6,6,
-27,27,27,33,5,35,27,27,27,27,27,33,5,35,27,27,
-25,25,25,32,5,34,25,25,25,25,25,32,5,28,37,37,
-6,6,6,6,7,6,6,6,6,6,6,6,4,28,42,42,
-27,27,27,33,5,35,27,27,27,27,27,33,5,28,37,24,
-40,40,40,26,5,28,41,31,41,31,41,26,5,28,42,42,
-40,40,40,26,5,28,31,41,31,41,31,26,5,28,42,42
+27,27,27,33,5,35,41,38,27,41,27,33,5,35,27,27,
+25,25,25,32,5,34,25,41,38,25,41,32,5,28,42,42,
+6,6,6,6,7,6,6,6,6,6,6,6,4,28,24,37,
+27,41,38,33,5,35,27,27,27,27,27,33,5,28,42,42,
+41,41,41,26,5,28,40,31,40,31,40,26,5,28,37,37,
+38,41,24,26,5,28,31,40,31,40,31,26,5,28,42,42
 </data>
  </layer>
  <objectgroup id="2" name="Paths">
@@ -47,7 +49,7 @@
   </object>
   <object id="6" name="path" type="path" x="0" y="283" width="500">
    <properties>
-    <property name="direzione" value=""/>
+    <property name="direzione" value="LEFT"/>
     <property name="paths" value=""/>
    </properties>
   </object>
@@ -99,7 +101,7 @@
     <property name="paths" value=""/>
    </properties>
   </object>
-  <object id="19" x="592" y="375" height="250">
+  <object id="19" name="path" type="path" x="592" y="375" height="250">
    <properties>
     <property name="direzione" value="UP"/>
     <property name="paths" value="7,6"/>
@@ -174,8 +176,8 @@
    <point/>
   </object>
  </objectgroup>
- <objectgroup id="5" name="TrafficLights" locked="1">
-  <object id="41" type="semaforo" x="625" y="125" width="125" height="125">
+ <objectgroup id="5" name="TrafficLights">
+  <object id="41" type="semaforo" x="625" y="124" width="125" height="125">
    <properties>
     <property name="direzione" value="LEFT"/>
     <property name="rotation" type="int" value="2"/>
@@ -278,7 +280,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="3" name="Incroci" locked="1">
+ <objectgroup id="3" name="Incroci">
   <object id="29" type="incrocioA3" x="500" y="250" width="125" height="125">
    <properties>
     <property name="direzione" value="UP"/>
@@ -297,7 +299,7 @@
    </properties>
   </object>
  </objectgroup>
- <objectgroup id="4" name="SpawnPoints" locked="1">
+ <objectgroup id="4" name="SpawnPoints">
   <object id="34" type="spawn" x="592" y="1125">
    <properties>
     <property name="direzione" value="UP"/>
@@ -305,7 +307,7 @@
    </properties>
    <point/>
   </object>
-  <object id="35" x="0" y="714">
+  <object id="35" type="spawn" x="0" y="714">
    <properties>
     <property name="direzione" value="RIGHT"/>
     <property name="tir" type="bool" value="false"/>
