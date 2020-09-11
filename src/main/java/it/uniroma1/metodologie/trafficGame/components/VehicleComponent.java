@@ -360,11 +360,14 @@ public class VehicleComponent extends Component{
 		if(i.getComponentOptional(TrafficLightAnimationComponent.class).orElseThrow().isGreen()
 				|| entity.isColliding(getNearestIncrocio())) {
 			if(!accelerating) {
-				if(//nextPath != null && 
+				if(nextPath != null && 
 						nextPath.getComponent(PathComponent.class).isFree(entity)) {
 					nextPath.getComponent(PathComponent.class).addCar(entity);
 					accelerate();
 				}
+				else if(nextPath == null)
+					accelerate();
+					
 			}
 		}
 		else

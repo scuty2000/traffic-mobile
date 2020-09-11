@@ -42,6 +42,7 @@ import it.uniroma1.metodologie.trafficGame.ui.TrafficAppMenu;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -353,11 +354,11 @@ public class TrafficApp extends GameApplication {
 				 * recupero il semaforo opposto a quello del veicolo
 				 */
 				int[] infos = whereToCheck(v.getComponent(VehicleComponent.class).getDirection());
-				Optional<Entity> carOnTheOtherSide = FXGL.getGameWorld().getEntitiesInRange(new Rectangle2D(v.getX() + infos[0], v.getY() + infos[1], infos[2], infos[3])).stream().filter(x -> x.getType().equals(EntityType.VEHICLE)).findFirst();
+				Optional<Entity> carOnTheOtherSide = FXGL.getGameWorld().getEntitiesInRange(new Rectangle2D(v.getCenter().getX() + infos[0], v.getCenter().getY() + infos[1], infos[2], infos[3])).stream().filter(x -> x.getType().equals(EntityType.VEHICLE)).findFirst();
 //						(EntityType.SEMAFORO).stream()
 //																	.filter(x -> !x.isColliding(v) && Directions.valueOf((String) x.getPropertyOptional("direzione").orElseThrow()).isOpposite(v.getComponent(VehicleComponent.class).getDirection()))
 //																	.min(Comparator.comparing(x -> v.getPosition().distance(x.getPosition()))).orElseThrow();
-				//FXGL.entityBuilder().viewWithBBox(new Rectangle2D(infos[0], infos[1], infos[2], infos[3]));
+
 				if(isTurningLeft(v.getComponent(VehicleComponent.class).getDirection(), Directions.valueOf((String) v.getComponent(VehicleComponent.class).getNextPath().getPropertyOptional("direzione").orElseThrow())) 
 						&& carOnTheOtherSide.isPresent())
 					v.getComponent(VehicleComponent.class).generateNewStraightPath();
@@ -367,10 +368,10 @@ public class TrafficApp extends GameApplication {
 			//deve tornare un array con x, y, width e height
 			private int[] whereToCheck(Directions d){
 				switch(d) {
-				case UP: return new int[] {-63,-500,1,350};
-				case DOWN: return new int[] {63,200,1,350};
-				case LEFT: return new int[] {-500,63,350,1};
-				case RIGHT: return new int[] {200,-63,350,1};
+				case UP: return new int[] {-75,-300,6,200};
+				case DOWN: return new int[] {50,125,6,200};
+				case LEFT: return new int[] {-300,63,200,6};
+				case RIGHT: return new int[] {125,-63,200,6};
 				}
 				return null;
 				
