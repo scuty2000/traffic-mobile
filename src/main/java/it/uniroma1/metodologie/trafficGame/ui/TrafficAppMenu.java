@@ -52,14 +52,6 @@ public class TrafficAppMenu extends FXGLMenu {
 	private final int xMenuPosition = 200;
 	private final int yMenuPosition = 750;
 	
-	private File dir = new File("src/main/resources/assets/levels");
-	private List<File> files = Arrays.asList(dir.listFiles((FilenameFilter) new FilenameFilter() {
-	    @Override
-	    public boolean accept(File dir, String name) {
-	        return name.endsWith(".tmx");
-	    }
-	}));
-	
 	public TrafficAppMenu(MenuType type) {
 		super(type);
 		TrafficButton btnPlayGame = new TrafficButton("Avvia una partita", () -> fireNewGame());
@@ -77,6 +69,8 @@ public class TrafficAppMenu extends FXGLMenu {
 		placeholder4.setFocusTraversable(false);
 		TrafficButton placeholder5 = new TrafficButton("", () -> {});
 		placeholder5.setFocusTraversable(false);
+		TrafficButton placeholder6 = new TrafficButton("", () -> {});
+		placeholder6.setFocusTraversable(false);
 		
 		btnExtras.setDisable(true);
 		btnCredits.setDisable(true);
@@ -145,14 +139,11 @@ public class TrafficAppMenu extends FXGLMenu {
 		
 		this.mapBox = new VBox(10);
 		
-		Collections.sort(files);
-		
-		for (File file : files) {
-			mapBox.getChildren().add(new TrafficButton(file.getName().replace('_', ' ').replace(".tmx", ""), () -> setMap(file.getName())));
-		}
-		
-		mapBox.getChildren().addAll(placeholder4,
+		mapBox.getChildren().addAll(
+				new TrafficButton("Mappa 01", () -> setMap("Mappa_01.tmx")),
+				placeholder4,
 				placeholder5,
+				placeholder6,
 				new TrafficButton("Indietro", () -> toggleMap()),
 				new Text(""),
 				new Separator(Orientation.HORIZONTAL),

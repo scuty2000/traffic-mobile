@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.almasb</groupId>
+    <groupId>it.scut</groupId>
     <artifactId>Traffic</artifactId>
     <version>1.0</version>
 
@@ -185,11 +185,10 @@
                         <list>it.uniroma1.metodologie.trafficGame.TrafficFactory</list>
                         <list>it.uniroma1.metodologie.trafficGame.Vehicle</list>
                         <list>it.uniroma1.metodologie.trafficGame.components.CrossRoadComponent</list>
-                        <list>it.uniroma1.metodologie.trafficGame.components.SpawnPointComponent;</list>
-                        <list>it.uniroma1.metodologie.trafficGame.components.TrafficLightAnimationComponent;</list>
-                        <list>it.uniroma1.metodologie.trafficGame.components.VehicleComponent;</list>
-                        <list>it.uniroma1.metodologie.trafficGame.components.PlayerAnimationComponent;</list>
-                        <list>it.uniroma1.metodologie.trafficGame.components.PlayerComponent;</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.SpawnPointComponent</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.TrafficLightAnimationComponent</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.VehicleComponent</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.PlayerAnimationComponent</list>
                         
                     </reflectionList>
                     <target>ios</target>

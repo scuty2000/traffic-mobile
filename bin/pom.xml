@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.almasb</groupId>
-    <artifactId>Drop</artifactId>
+    <artifactId>Traffic</artifactId>
     <version>1.0</version>
 
     <properties>
@@ -20,7 +20,7 @@
         <jfx.maven.plugin.version>0.0.4</jfx.maven.plugin.version>
         <client.plugin.version>0.1.31-SNAPSHOT</client.plugin.version>
         <attach.version>4.0.8</attach.version>
-        <mainClassName>com.almasb.fxglgames.drop.DropApp</mainClassName>
+        <mainClassName>it.uniroma1.metodologie.trafficGame.TrafficApp</mainClassName>
     </properties>
 
     <pluginRepositories>
@@ -108,9 +108,9 @@
                     <compress>2</compress>
                     <noHeaderFiles>true</noHeaderFiles>
                     <noManPages>true</noManPages>
-                    <launcher>Drop-game</launcher>
-                    <jlinkImageName>drop-game</jlinkImageName>
-                    <jlinkZipName>drop-game</jlinkZipName>
+                    <launcher>Traffic-game</launcher>
+                    <jlinkImageName>traffic-game</jlinkImageName>
+                    <jlinkZipName>traffic-game</jlinkZipName>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
@@ -181,10 +181,18 @@
                         <list>com.almasb.fxgl.dsl.components.ProjectileComponent</list>
 
                         <!--     Custom components                  -->
-
-
+                        <list>it.uniroma1.metodologie.trafficGame.Directions</list>
+                        <list>it.uniroma1.metodologie.trafficGame.TrafficFactory</list>
+                        <list>it.uniroma1.metodologie.trafficGame.Vehicle</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.CrossRoadComponent</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.SpawnPointComponent;</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.TrafficLightAnimationComponent;</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.VehicleComponent;</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.PlayerAnimationComponent;</list>
+                        <list>it.uniroma1.metodologie.trafficGame.components.PlayerComponent;</list>
+                        
                     </reflectionList>
-                    <target>android</target>
+                    <target>ios</target>
                     <mainClass>${mainClassName}</mainClass>
                 </configuration>
             </plugin>
