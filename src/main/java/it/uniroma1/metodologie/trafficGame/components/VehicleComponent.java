@@ -141,7 +141,7 @@ public class VehicleComponent extends Component{
 		case 4: return 0.7;
 		case 5: return 0.7;
 		case 6: return -0.7;
-		default: return -0.7;
+		default: return -1;
 		}
 	}
 	
@@ -271,7 +271,6 @@ public class VehicleComponent extends Component{
 
 			if(entity.getRotation()%90 == 0) {
 				turning = false;
-				accelerate();
 				this.arrayCurve.clear();
 				for (ArrayList<Point2D> arrayList : arrayCurveBCK) {
 					this.arrayCurve.add((ArrayList<Point2D>) arrayList.clone());
@@ -361,13 +360,11 @@ public class VehicleComponent extends Component{
 		if(i.getComponentOptional(TrafficLightAnimationComponent.class).orElseThrow().isGreen()
 				|| entity.isColliding(getNearestIncrocio())) {
 			if(!accelerating) {
-				if(nextPath != null 
-						&& nextPath.getComponent(PathComponent.class).isFree(entity)) {
+				if(//nextPath != null && 
+						nextPath.getComponent(PathComponent.class).isFree(entity)) {
 					nextPath.getComponent(PathComponent.class).addCar(entity);
 					accelerate();
 				}
-				else if(nextPath == null)
-					accelerate();
 			}
 		}
 		else

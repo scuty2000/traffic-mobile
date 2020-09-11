@@ -348,7 +348,7 @@ public class TrafficApp extends GameApplication {
 
 			@Override
 			protected void onCollisionBegin(Entity v, Entity i) {
-				i.getComponent(CrossRoadComponent.class).addCar();
+				i.getComponent(CrossRoadComponent.class).addCar(v);
 				/*
 				 * recupero il semaforo opposto a quello del veicolo
 				 */
@@ -357,7 +357,7 @@ public class TrafficApp extends GameApplication {
 //						(EntityType.SEMAFORO).stream()
 //																	.filter(x -> !x.isColliding(v) && Directions.valueOf((String) x.getPropertyOptional("direzione").orElseThrow()).isOpposite(v.getComponent(VehicleComponent.class).getDirection()))
 //																	.min(Comparator.comparing(x -> v.getPosition().distance(x.getPosition()))).orElseThrow();
-
+				//FXGL.entityBuilder().viewWithBBox(new Rectangle2D(infos[0], infos[1], infos[2], infos[3]));
 				if(isTurningLeft(v.getComponent(VehicleComponent.class).getDirection(), Directions.valueOf((String) v.getComponent(VehicleComponent.class).getNextPath().getPropertyOptional("direzione").orElseThrow())) 
 						&& carOnTheOtherSide.isPresent())
 					v.getComponent(VehicleComponent.class).generateNewStraightPath();
@@ -392,7 +392,7 @@ public class TrafficApp extends GameApplication {
 			
 
 			@Override
-			protected void onCollisionEnd(Entity v, Entity i) { i.getComponent(CrossRoadComponent.class).subCar(); }
+			protected void onCollisionEnd(Entity v, Entity i) { i.getComponent(CrossRoadComponent.class).subCar(v); }
 
 		});		
 
@@ -407,8 +407,10 @@ public class TrafficApp extends GameApplication {
 					v.getComponent(VehicleComponent.class).slowDown();
 					i.getComponent(TrafficLightAnimationComponent.class).registerCar(v);
 				}
-				else
+				else {
 					v.getComponent(VehicleComponent.class).getNextPath().getComponent(PathComponent.class).addCar(v);
+					v.getComponent(VehicleComponent.class).getNearestIncrocio().getComponent(CrossRoadComponent.class).addCar(v);
+				}
 
 			}
 
@@ -419,7 +421,12 @@ public class TrafficApp extends GameApplication {
 		});	
 
 		FXGL.getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.VEHICLE, EntityType.PATH) {
-
+			
+			@Override
+			protected void onCollisionBegin(Entity v, Entity p) {
+				p.getComponent(PathComponent.class).addCar(v);
+			}
+			
 			@Override
 			protected void onCollisionEnd(Entity v, Entity p) {
 				p.getComponent(PathComponent.class).removeCar(v);

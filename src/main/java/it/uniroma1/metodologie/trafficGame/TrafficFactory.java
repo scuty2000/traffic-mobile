@@ -131,7 +131,7 @@ public class TrafficFactory implements EntityFactory{
 		Point2D p = getPoint(i);
 		p.add(data.getX(), data.getY());
 		
-		HitBox h = new HitBox(p, BoundingShape.box(20, 20));
+		HitBox h = new HitBox(p, BoundingShape.box(16, 16));
 		e.getBoundingBoxComponent().addHitBox(h);
 		
 		return e;
@@ -185,7 +185,7 @@ public class TrafficFactory implements EntityFactory{
 		return e;
 	}
 	
-	private final int SPAWN_WIDTH = 50;
+	private final int SPAWN_WIDTH = 60;
 	private List<Object> calcOffsetSpawn(String d) {
 		switch(Directions.valueOf(d)) {
 		case UP:return List.of(new Point2D(-2.5, -SPAWN_WIDTH),BoundingShape.box(2.5, SPAWN_WIDTH));
