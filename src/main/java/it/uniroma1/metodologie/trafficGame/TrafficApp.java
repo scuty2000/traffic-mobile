@@ -51,14 +51,14 @@ public class TrafficApp extends GameApplication {
 	private ArrayList<Entity> incroci;
 
 	private Music gameMusic;
-	
+
 	private static final int EASY = 110;
 	private static final int MEDIUM = 50;
 	private static final int HARD = 30;
 
 	private int spawnRate = 120;	//fps before spawn of a new car
 	private int minSpawnRate = MEDIUM;	//min spawn fps
-	
+
 	public String getMinSpawnRate() {
 		switch(this.minSpawnRate) {
 		case EASY : return "EASY";
@@ -70,10 +70,10 @@ public class TrafficApp extends GameApplication {
 
 	public void setMinSpawnRate(String difficulty) {
 		switch(difficulty) {
-			case "EASY" : this.minSpawnRate = EASY; break;
-			case "MEDIUM" : this.minSpawnRate = MEDIUM; break;
-			case "HARD" : this.minSpawnRate = HARD; break;
-			default : throw new IllegalArgumentException("Unexpected value: " + difficulty);
+		case "EASY" : this.minSpawnRate = EASY; break;
+		case "MEDIUM" : this.minSpawnRate = MEDIUM; break;
+		case "HARD" : this.minSpawnRate = HARD; break;
+		default : throw new IllegalArgumentException("Unexpected value: " + difficulty);
 		}
 	}
 
@@ -113,7 +113,7 @@ public class TrafficApp extends GameApplication {
 	}
 
 	private HashMap<Integer, ArrayList<Entity>> matrixIncroci;
-	
+
 	private int spawnCount;
 
 	@Override
@@ -122,7 +122,7 @@ public class TrafficApp extends GameApplication {
 		GameWorld gw = FXGL.getGameWorld();
 
 		gw.addEntityFactory(new TrafficFactory());
-		
+
 		FXGL.setLevelFromMap(map);
 
 		//		pointersound = FXGL.getAssetLoader().loadSound("pointersound.wav");
@@ -145,9 +145,9 @@ public class TrafficApp extends GameApplication {
 		}
 
 		this.SCORE_TIMER = FXGL.newLocalTimer();
-		
+
 		spawnCount = (int) gw.getEntities().stream().filter(x -> x.getType().equals(EntityType.SPAWN)).count();
-		
+
 		VehicleComponent.creaCurve();
 	}
 
@@ -236,12 +236,12 @@ public class TrafficApp extends GameApplication {
 			}
 		}, KeyCode.S);
 
-		i.addAction(new UserAction("Spawn Car") {
-			@Override
-			protected void onActionBegin() {
-				spawnCar();
-			}
-		}, KeyCode.SPACE);
+		//		i.addAction(new UserAction("Spawn Car") {
+		//			@Override
+		//			protected void onActionBegin() {
+		//				spawnCar();
+		//			}
+		//		}, KeyCode.SPACE);
 
 		i.addAction(new UserAction("Select and change traffic light") {
 			@Override
@@ -353,18 +353,20 @@ public class TrafficApp extends GameApplication {
 				/*
 				 * recupero il semaforo opposto a quello del veicolo
 				 */
-				int[] infos = whereToCheck(v.getComponent(VehicleComponent.class).getDirection());
-				Optional<Entity> carOnTheOtherSide = FXGL.getGameWorld().getEntitiesInRange(new Rectangle2D(v.getCenter().getX() + infos[0], v.getCenter().getY() + infos[1], infos[2], infos[3])).stream().filter(x -> x.getType().equals(EntityType.VEHICLE)).findFirst();
-//						(EntityType.SEMAFORO).stream()
-//																	.filter(x -> !x.isColliding(v) && Directions.valueOf((String) x.getPropertyOptional("direzione").orElseThrow()).isOpposite(v.getComponent(VehicleComponent.class).getDirection()))
-//																	.min(Comparator.comparing(x -> v.getPosition().distance(x.getPosition()))).orElseThrow();
+				//						(EntityType.SEMAFORO).stream()
+				//																	.filter(x -> !x.isColliding(v) && Directions.valueOf((String) x.getPropertyOptional("direzione").orElseThrow()).isOpposite(v.getComponent(VehicleComponent.class).getDirection()))
+				//																	.min(Comparator.comparing(x -> v.getPosition().distance(x.getPosition()))).orElseThrow();
 
-				if(isTurningLeft(v.getComponent(VehicleComponent.class).getDirection(), Directions.valueOf((String) v.getComponent(VehicleComponent.class).getNextPath().getPropertyOptional("direzione").orElseThrow())) 
-						&& carOnTheOtherSide.isPresent())
-					v.getComponent(VehicleComponent.class).generateNewStraightPath();
+				if(isTurningLeft(v.getComponent(VehicleComponent.class).getDirection(), Directions.valueOf((String) v.getComponent(VehicleComponent.class).getNextPath().getPropertyOptional("direzione").orElseThrow()))) {
+					int[] infos = whereToCheck(v.getComponent(VehicleComponent.class).getDirection());
+					Optional<Entity> carOnTheOtherSide = FXGL.getGameWorld().getEntitiesInRange(new Rectangle2D(v.getCenter().getX() + infos[0], v.getCenter().getY() + infos[1], infos[2], infos[3])).stream().filter(x -> x.getType().equals(EntityType.VEHICLE)).findFirst();
+
+					if(carOnTheOtherSide.isPresent())
+						v.getComponent(VehicleComponent.class).generateNewStraightPath();
+				}
 				turnVehicle(v);
 			}
-			
+
 			//deve tornare un array con x, y, width e height
 			private int[] whereToCheck(Directions d){
 				switch(d) {
@@ -374,13 +376,13 @@ public class TrafficApp extends GameApplication {
 				case RIGHT: return new int[] {125,-63,200,6};
 				}
 				return null;
-				
+
 			}
-			
+
 			private void turnVehicle(Entity v) {
 				v.getComponent(VehicleComponent.class).nextPath();
 			}
-			
+
 			private boolean isTurningLeft(Directions oldDir, Directions newDir) {
 				switch(oldDir) {
 				case UP : return newDir.equals(Directions.LEFT);
@@ -390,7 +392,7 @@ public class TrafficApp extends GameApplication {
 				}
 				return false;
 			}
-			
+
 
 			@Override
 			protected void onCollisionEnd(Entity v, Entity i) { i.getComponent(CrossRoadComponent.class).subCar(v); }
@@ -422,12 +424,12 @@ public class TrafficApp extends GameApplication {
 		});	
 
 		FXGL.getPhysicsWorld().addCollisionHandler(new CollisionHandler(EntityType.VEHICLE, EntityType.PATH) {
-			
+
 			@Override
 			protected void onCollisionBegin(Entity v, Entity p) {
 				p.getComponent(PathComponent.class).addCar(v);
 			}
-			
+
 			@Override
 			protected void onCollisionEnd(Entity v, Entity p) {
 				p.getComponent(PathComponent.class).removeCar(v);
@@ -447,22 +449,22 @@ public class TrafficApp extends GameApplication {
 
 	@Override
 	protected void onUpdate(double tpf) {
-				if(SCORE_TIMER.elapsed(Duration.seconds(1))) {
-					FXGL.getWorldProperties().increment("score", pointsPerSec/5);
-					FXGL.getGameScene().clearUINodes();
-					Text uiText = new Text("Score : " + FXGL.getWorldProperties().getInt("score"));
-					uiText.setFont(Font.font(30));
-					// 2. add the UI object to game scene (easy way) at 100, 100
-					FXGL.addUINode(uiText, 10, 30);
-					SCORE_TIMER.capture();
-				}
-				if(counter > spawnRate) {
-					spawnCar();
-					counter = 0;
-					if(spawnRate > minSpawnRate)
-						spawnRate--;
-				}
-				counter ++;
+		if(SCORE_TIMER.elapsed(Duration.seconds(1))) {
+			FXGL.getWorldProperties().increment("score", pointsPerSec/5);
+			FXGL.getGameScene().clearUINodes();
+			Text uiText = new Text("Score : " + FXGL.getWorldProperties().getInt("score"));
+			uiText.setFont(Font.font(30));
+			// 2. add the UI object to game scene (easy way) at 100, 100
+			FXGL.addUINode(uiText, 10, 30);
+			SCORE_TIMER.capture();
+		}
+		if(counter > spawnRate) {
+			spawnCar();
+			counter = 0;
+			if(spawnRate > minSpawnRate)
+				spawnRate--;
+		}
+		counter ++;
 	}
 
 	private int pointsPerSec;
