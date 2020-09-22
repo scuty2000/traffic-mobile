@@ -16,7 +16,7 @@ public class PathComponent extends Component{
 	private int size;
 	private int current;
 	private List<Entity> carList = new LinkedList<>();
-	private int sF = 10; //devo togliere dalla width della macchina lo spazio di frenata perch� se venisse aggiunto a current il path si saturerebbe troppo presto rispetto alla sua attuale capacit�
+	private int sF = 11; //devo togliere dalla width della macchina lo spazio di frenata perch� se venisse aggiunto a current il path si saturerebbe troppo presto rispetto alla sua attuale capacit�
 	private boolean isOnBorder;
 	private LocalTimer updateTimer;
 	
